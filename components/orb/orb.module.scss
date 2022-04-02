@@ -1,24 +1,13 @@
+// The particle orb is from https://codepen.io/natewiley/pen/GgONKy
 // best in chrome
 $total: 300; // total particles
 $orb-size: 50px;
 $particle-size: 2px;
 $time: 14s;
-$base-hue: 0; // change for diff colors (180 is nice)
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  background: black;
-  overflow: hidden; // no scrollbars..
-}
+$base-hue: 120; // change for diff colors (180 is nice)
 
 .wrap {
   position: relative;
-  top: 50%;
-  left: 50%;
   width: 0;
   height: 0;
   transform-style: preserve-3d;

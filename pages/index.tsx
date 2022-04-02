@@ -1,12 +1,11 @@
 import type { NextPage } from 'next'
-// import Head from 'next/head'
-// import Image from 'next/image'
-import styles from '../styles/circle.scss'
+import { Orb } from 'components'
+import styles from 'styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.wrap}>
-      <div className="c" id="circle"></div>
+    <div className={styles.container}>
+      <Orb particles={300} />
     </div>
   )
 }
