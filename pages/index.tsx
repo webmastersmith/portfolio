@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
-import { Orb } from 'components'
 import styles from 'styles/Home.module.css'
+import { Hero } from 'components'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <Orb particles={300} />
+    <div>
+      <Hero />
     </div>
   )
 }

@@ -99,13 +99,14 @@ h6 {
 /* Bellow my custom addons*/
 /* to use variables: var(--red, fallback) */
 :root {
-  --red: #77002e;
+  --baseDark: #0e0d0d;
+  --baseWhite: #f7fff7;
+
+  // --baseColor: #508aa8;
+  // --baseColor: #5ad2f4;
+  // --baseColor: #da4167;
+  // --baseHue: 120;
+
   --single-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
 }
 /* className="container" */
-.container {
-  padding: 2rem 2rem;
-  display: grid;
-  justify-items: center;
-  gap: 1rem;
-}
