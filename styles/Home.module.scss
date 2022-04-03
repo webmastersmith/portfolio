@@ -6,13 +6,14 @@
 .header {
   background-color: $baseDark;
   height: $sectionHeight;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
 .cv {
   height: $sectionHeight;
 }
 .icons {
   background-color: $baseDark;
-  height: calc($sectionHeight + 20rem);
-  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+  // height: calc($sectionHeight + 20rem);
+  padding: 6rem 1rem;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
 }

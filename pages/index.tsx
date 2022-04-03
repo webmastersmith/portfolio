@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Hero } from 'components'
+import { Hero, Icons } from 'components'
 import styles from 'styles/Home.module.scss'
 
 const Home: NextPage = () => {
@@ -11,7 +11,9 @@ const Home: NextPage = () => {
 
       <main>
         <section className={styles.cv}></section>
-        <section className={styles.icons}></section>
+        <section className={styles.icons}>
+          <Icons />
+        </section>
       </main>
     </div>
   )
