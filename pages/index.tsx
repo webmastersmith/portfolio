@@ -1,11 +1,18 @@
 import type { NextPage } from 'next'
-import styles from 'styles/Home.module.css'
 import { Hero } from 'components'
+import styles from 'styles/Home.module.scss'
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Hero />
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <Hero />
+      </header>
+
+      <main>
+        <section className={styles.cv}></section>
+        <section className={styles.icons}></section>
+      </main>
     </div>
   )
 }

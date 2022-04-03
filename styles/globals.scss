@@ -1,3 +1,5 @@
+@import './variable.module.scss';
+
 *,
 *::before,
 *::after {
@@ -13,6 +15,7 @@ body,
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: $baseLight;
 }
 /* can break 3rd party css */
 * {
@@ -99,14 +102,11 @@ h6 {
 /* Bellow my custom addons*/
 /* to use variables: var(--red, fallback) */
 :root {
-  --baseDark: #0e0d0d;
-  --baseWhite: #f7fff7;
-
   // --baseColor: #508aa8;
   // --baseColor: #5ad2f4;
   // --baseColor: #da4167;
   // --baseHue: 120;
 
-  --single-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
+  // --single-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
 }
 /* className="container" */

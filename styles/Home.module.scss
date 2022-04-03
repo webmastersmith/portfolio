@@ -1,0 +1,18 @@
+@import './variable.module.scss';
+
+.container {
+  margin-bottom: 5rem;
+}
+.header {
+  background-color: $baseDark;
+  height: $sectionHeight;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+.cv {
+  height: $sectionHeight;
+}
+.icons {
+  background-color: $baseDark;
+  height: calc($sectionHeight + 20rem);
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+}

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import styles from './hero.module.scss'
-import { Orb } from 'components'
+import { Section, Orb } from 'components'
 
 //interface Props {
 //	data: string
@@ -9,7 +9,7 @@ import { Orb } from 'components'
 
 export const Hero: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.hero}>
       <Orb particles={300} />
     </div>
   )

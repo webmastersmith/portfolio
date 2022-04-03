@@ -1,28 +1,6 @@
-$heroHeight: 30rem;
-$heroSkew: -80deg;
-.container {
+.hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--baseDark);
-  // background: #fff;
-  overflow: hidden;
-  min-height: $heroHeight;
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: $heroHeight;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--baseDark);
-    -webkit-transform-origin: 100% 0;
-    -ms-transform-origin: 100% 0;
-    transform-origin: 100% 0;
-    -webkit-transform: skew($heroSkew);
-    -ms-transform: skew($heroSkew);
-    transform: skew($heroSkew);
-    z-index: 1;
-  }
+  min-height: 30rem;
 }
