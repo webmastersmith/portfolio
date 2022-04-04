@@ -53,7 +53,7 @@ export const Icons: NextPage = () => {
   return (
     <div className={styles.iconContainer}>
       <h1>
-        My <span>Skills</span>
+        A Few <span>Skills</span>
       </h1>
       <div className={styles.iconInnerContainer}>
         {icons.map(({ Icon, msg }, i) => {

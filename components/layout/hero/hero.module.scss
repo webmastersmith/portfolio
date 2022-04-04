@@ -1,6 +1,16 @@
+@import 'styles/variable.module.scss';
+
+.text {
+  color: $baseLight;
+  width: 50%;
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}
 .hero {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   min-height: 30rem;
 }
