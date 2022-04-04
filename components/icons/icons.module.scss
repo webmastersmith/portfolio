@@ -6,11 +6,12 @@ $size: 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem 0 4rem 0;
   h1 {
     color: $baseLight;
-    margin-bottom: 4rem;
     font-size: 2.5rem;
     font-weight: bold;
+    margin-bottom: 3rem;
     span {
       color: #009fb7;
       color: #ee964b;

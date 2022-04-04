@@ -18,6 +18,8 @@ import {
   React,
   Typescript,
   Git,
+  Express,
+  Gimp,
 } from 'icons'
 
 //interface Props {
@@ -38,12 +40,14 @@ export const Icons: NextPage = () => {
     { Icon: Nextjs, msg: 'NextJS' },
     { Icon: Git, msg: 'Git' },
     { Icon: Node, msg: 'Node' },
+    { Icon: Express, msg: 'Express' },
     { Icon: Mongodb, msg: 'MongoDB' },
     { Icon: Firebase, msg: 'Firebase' },
     { Icon: Puppeteer, msg: 'Puppeteer' },
     { Icon: LinuxTux, msg: 'Linux' },
     { Icon: Apache, msg: 'Apache' },
     { Icon: Bash, msg: 'Bash Shell' },
+    { Icon: Gimp, msg: 'Gimp' },
   ]
 
   return (
