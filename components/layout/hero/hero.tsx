@@ -10,12 +10,19 @@ import { Orb, Bryon } from 'components'
 export const Hero: NextPage = () => {
   return (
     <div className={styles.hero}>
-      <div className={styles.text}>
-        <h1>Bryon Smith.</h1>
-        <h2>I help build full stack dreams...</h2>
-        <h2>Let&#39;s be friends.</h2>
+      <div className={styles.textContainer}>
+        <div className={styles.text}>
+          <p>Hi, I&#39;m</p>
+          <h1>Bryon Smith.</h1>
+          <h2>
+            I help build <span>full stack</span> dreams...
+          </h2>
+        </div>
       </div>
-      <Bryon />
+
+      <div className={styles.bryonContainer}>
+        <Bryon />
+      </div>
     </div>
   )
 }
