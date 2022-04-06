@@ -29,10 +29,27 @@
       margin-bottom: 1rem;
     }
     h2 {
+      margin-bottom: 2rem;
       span {
         color: $red;
       }
     }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+  .line {
+    border-bottom: 1px solid $blue;
+    width: 50%;
   }
 }
 

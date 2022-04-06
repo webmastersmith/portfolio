@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import styles from './hero.module.scss'
-import { Orb, Bryon } from 'components'
+import { Bryon } from 'components'
+import { Circle, Linkedin, Github, Twitter } from 'icons'
 
 //interface Props {
 //	data: string
@@ -17,6 +18,31 @@ export const Hero: NextPage = () => {
           <h2>
             I help build <span>full stack</span> dreams...
           </h2>
+
+          <div className={styles.links}>
+            <div className={styles.line} />
+            <a
+              href="https://www.linkedin.com/in/bryonsmith/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Linkedin />
+            </a>
+            <a
+              href="https://github.com/webmastersmith"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Github />
+            </a>
+            <a
+              href="https://twitter.com/MasterTech40"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Twitter />
+            </a>
+          </div>
         </div>
       </div>
 
