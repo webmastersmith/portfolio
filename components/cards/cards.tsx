@@ -13,6 +13,7 @@ export const Cards: NextPage = () => {
       src: '/AddressHelper/AddressHelper.png',
       alt: 'image of address helper website',
       title: 'Address Helper',
+      text: 'Address Helper to locate people in city',
     },
   ]
 

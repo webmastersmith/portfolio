@@ -6,14 +6,16 @@ interface Props {
   src: string
   alt: string
   title: string
+  text: string
 }
 // NextPage<Props>
 
-export const Card: NextPage<Props> = ({ src, alt, title, children }) => {
+export const Card: NextPage<Props> = ({ src, alt, title, text, children }) => {
   return (
     <div className={styles.cardContainer}>
-      <div className={styles.text}>
+      <div className={styles.textContainer}>
         <h1>{title}</h1>
+        <p>{text}</p>
         <Button />
       </div>
 

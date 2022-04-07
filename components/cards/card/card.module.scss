@@ -1,27 +1,45 @@
 @import 'styles/variable.module.scss';
 
 .cardContainer {
-  display: flex;
-  width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'a b';
+  width: 700px;
+
+  // grid-template-rows: 1fr, 1fr;
+  // grid-template-areas:
+  //   'a'
+  //   'b';
+  // width: 400px;
+
   background: #ffffff;
+  background-image: linear-gradient(
+    to bottom,
+    hsla(14, 67%, 28%, 0.5),
+    hsla(41, 54%, 75%, 0.5)
+  );
+
   border-radius: 15px;
   box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  color: $baseDark;
+
   img {
-    width: 50%;
+    grid-area: a;
+    width: 100%;
     height: auto;
   }
 }
 
-.text {
-  width: 50%;
+.textContainer {
+  grid-area: b;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 
   h1 {
-    color: $baseDark;
     font-weight: bold;
+    font-size: 2.5rem;
   }
 }
