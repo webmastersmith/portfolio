@@ -1,0 +1,27 @@
+@import 'styles/variable.module.scss';
+
+.cardContainer {
+  display: flex;
+  width: 600px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+
+  h1 {
+    color: $baseDark;
+    font-weight: bold;
+  }
+}

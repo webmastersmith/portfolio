@@ -8,10 +8,11 @@
   height: $sectionHeight;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
-.cv {
+.cardSection {
   height: $sectionHeight;
+  padding: 2rem;
 }
-.icons {
+.iconSection {
   background-color: $baseDark;
   // height: calc($sectionHeight + 20rem);
   padding: 6rem 1rem;

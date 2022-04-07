@@ -10,10 +10,10 @@ const Home: NextPage = () => {
       </header>
 
       <main>
-        <section className={styles.cards}>
+        <section className={styles.cardSection}>
           <Cards />
         </section>
-        <section className={styles.icons}>
+        <section className={styles.iconSection}>
           <Icons />
         </section>
       </main>

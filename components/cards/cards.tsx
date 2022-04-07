@@ -12,6 +12,7 @@ export const Cards: NextPage = () => {
     {
       src: '/AddressHelper/AddressHelper.png',
       alt: 'image of address helper website',
+      title: 'Address Helper',
     },
   ]
 
