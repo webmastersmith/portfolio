@@ -11,6 +11,7 @@ const Home: NextPage = () => {
 
       <main>
         <section className={styles.cardSection}>
+          <h1>My Projects</h1>
           <Cards />
         </section>
         <section className={styles.iconSection}>
