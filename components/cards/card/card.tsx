@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { SVGProps } from 'react'
+import { SVGProps, useState, useRef, useEffect } from 'react'
 import styles from './card.module.scss'
 import { Button } from 'components'
 
@@ -24,8 +24,40 @@ export const Card: NextPage<Props> = ({
   icons,
   children,
 }) => {
+  const [inView, setInView] = useState(false) //state change loads image.
+  const objRef = useRef(null) //same as document.querySelector('img')
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setInView(true)
+            console.log('observed!')
+
+            // obs.disconnect() //disconnect once in view.
+          }
+        }
+      },
+      {
+        // rootMargin: '1000px',  //consider isIntersecting 1000px before item reaches viewport.
+      }
+    )
+    if (objRef.current) {
+      observer.observe(objRef?.current) //attach observer to 'objRef'
+    }
+    return () => {
+      observer.disconnect() //when unmount disconnect observer
+    }
+  }, [])
+
   return (
-    <div className={styles.cardContainer}>
+    <div
+      className={`${styles.cardContainer} ${
+        inView ? styles.cardContainerAnimate : ''
+      }`}
+      ref={objRef}
+    >
       <div className={styles.textContainer}>
         <h1>{title}</h1>
         <div className={styles.svgContainer}>

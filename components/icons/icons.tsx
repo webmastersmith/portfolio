@@ -20,6 +20,7 @@ import {
   Git,
   Express,
   Gimp,
+  Regex,
 } from 'icons'
 
 //interface Props {
@@ -48,6 +49,7 @@ export const Icons: NextPage = () => {
     { Icon: Apache, msg: 'Apache' },
     { Icon: Bash, msg: 'Bash Shell' },
     { Icon: Gimp, msg: 'Gimp' },
+    { Icon: Regex, msg: 'RegEx' },
   ]
 
   return (

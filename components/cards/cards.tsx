@@ -54,10 +54,10 @@ export const Cards: NextPage = () => {
   const NextjsBlack = () => <Nextjs style={{ fill: '#000000' }} />
   const cards = [
     {
-      src: '/AddressHelper/AddressHelper.png',
+      src: '/cards/addressHelper.png',
       alt: 'image of address helper website',
       title: 'Address Helper',
-      text: 'Address Helper to locate people in city',
+      text: 'Find property owners addresses.',
       icons: [
         { Icon: Html5, msg: 'HTML' },
         { Icon: Css3, msg: 'CSS' },
