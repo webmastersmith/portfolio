@@ -12,7 +12,7 @@ import {
   Firebase,
   Js,
   LinuxTux,
-  MongodbBlack,
+  Mongodb,
   Nextjs,
   Node,
   Puppeteer,
@@ -21,6 +21,10 @@ import {
   Git,
   Express,
   Gimp,
+  CreateReactApp,
+  Stripe,
+  Heroku,
+  Github,
 } from 'icons'
 
 //interface Props {
@@ -51,31 +55,63 @@ import {
 // ]
 
 export const Cards: NextPage = () => {
-  const NextjsBlack = () => <Nextjs style={{ fill: '#000000' }} />
   const cards = [
     {
-      src: '/cards/addressHelper.png',
+      src: '/cards/addressHelper/addressHelper.png',
       alt: 'image of address helper website',
       title: 'Address Helper',
-      text: 'Find property owners addresses.',
+      text: 'Webscraper, Database, to static website. Built to easily find property owners address, property image and property owner phone numbers. Hosted on an HTTPS Apache server.',
       icons: [
         { Icon: Html5, msg: 'HTML' },
         { Icon: Css3, msg: 'CSS' },
+        { Icon: Sass, msg: 'Sass' },
         { Icon: Js, msg: 'JavaScript' },
         { Icon: Typescript, msg: 'TypeScript' },
         { Icon: React, msg: 'React' },
-        { Icon: NextjsBlack, msg: 'NextJS' },
+        { Icon: Nextjs, msg: 'NextJS' },
         { Icon: Node, msg: 'Node' },
-        { Icon: MongodbBlack, msg: 'MongoDB' },
+        { Icon: Mongodb, msg: 'MongoDB' },
         { Icon: Puppeteer, msg: 'Puppeteer' },
+        { Icon: Apache, msg: 'Apache' },
+      ],
+    },
+    {
+      src: '/cards/candyCrush/candyCrush.png',
+      alt: 'image of candy crush game',
+      title: 'Candy Crush',
+      text: 'Candy Crush game inspired by Anna Kubow. Built with React Hooks. Hosted on Github pages.',
+      icons: [
+        { Icon: Html5, msg: 'HTML' },
+        { Icon: Css3, msg: 'CSS' },
+        { Icon: Sass, msg: 'Sass' },
+        { Icon: Js, msg: 'JavaScript' },
+        { Icon: React, msg: 'React' },
+        { Icon: CreateReactApp, msg: 'Create React App' },
+        { Icon: Github, msg: 'Github Pages' },
+      ],
+    },
+    {
+      src: '/cards/crownClothing/crownClothing.png',
+      alt: 'image of clothing store',
+      title: 'Crown Clothing',
+      text: '"Complete React Developer" Udemy course. Clothing Store with modern sign-in, editable shopping cart and stripe payments checkout. Hosted on Heroku.',
+      icons: [
+        { Icon: Html5, msg: 'HTML' },
+        { Icon: Css3, msg: 'CSS' },
+        { Icon: Sass, msg: 'Sass' },
+        { Icon: Js, msg: 'JavaScript' },
+        { Icon: React, msg: 'React' },
+        { Icon: CreateReactApp, msg: 'Create React App' },
+        { Icon: Stripe, msg: 'Stripe Payments' },
+        { Icon: Heroku, msg: 'Heroku' },
       ],
     },
   ]
 
   return (
-    <div>
-      {cards.map((card) => {
-        return <Card key={card.src} {...card} />
+    <div className={styles.cardsContainer}>
+      {cards.map((card, i) => {
+        return <Card key={card.src} {...card} id={i} />
       })}
     </div>
   )

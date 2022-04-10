@@ -21,6 +21,8 @@ import {
   Express,
   Gimp,
   Regex,
+  CreateReactApp,
+  StyledComponents,
 } from 'icons'
 
 //interface Props {
@@ -33,11 +35,13 @@ export const Icons: NextPage = () => {
     { Icon: Html5, msg: 'HTML 5' },
     { Icon: Css3, msg: 'CSS 3' },
     { Icon: Sass, msg: 'Sass' },
+    { Icon: StyledComponents, msg: 'Styled Components' },
     { Icon: Tailwind, msg: 'Tailwind CSS' },
     { Icon: Bootstrap, msg: 'Bootstrap' },
     { Icon: Js, msg: 'JavaScript' },
     { Icon: Typescript, msg: 'TypeScript' },
     { Icon: React, msg: 'React' },
+    { Icon: CreateReactApp, msg: 'Create React App' },
     { Icon: Nextjs, msg: 'NextJS' },
     { Icon: Git, msg: 'Git' },
     { Icon: Node, msg: 'Node' },

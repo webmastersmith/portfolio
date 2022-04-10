@@ -9,6 +9,7 @@ interface Props {
   title: string
   text: string
   icons: Icon[]
+  id: number
 }
 type Icon = {
   Icon: React.ComponentType
@@ -22,6 +23,7 @@ export const Card: NextPage<Props> = ({
   title,
   text,
   icons,
+  id,
   children,
 }) => {
   const [inView, setInView] = useState(false) //state change loads image.
@@ -33,10 +35,8 @@ export const Card: NextPage<Props> = ({
         for (const entry of entries) {
           if (entry.isIntersecting) {
             setInView(true)
-            console.log('observed!')
-
-            // obs.disconnect() //disconnect once in view.
-          }
+            obs.disconnect() //disconnect once in view.
+          } else setInView(false)
         }
       },
       {
@@ -54,11 +54,15 @@ export const Card: NextPage<Props> = ({
   return (
     <div
       className={`${styles.cardContainer} ${
-        inView ? styles.cardContainerAnimate : ''
+        inView ? styles.cardContainerAnimate : styles.cardContainerNoAnimate
       }`}
       ref={objRef}
     >
-      <div className={styles.textContainer}>
+      <div
+        className={`${styles.textContainer} ${
+          id % 2 === 1 ? styles.gridChildA : styles.gridChildB
+        }`}
+      >
         <h1>{title}</h1>
         <div className={styles.svgContainer}>
           {icons.map(({ Icon, msg }) => {
@@ -75,7 +79,11 @@ export const Card: NextPage<Props> = ({
       </div>
 
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt={alt} />
+      <img
+        src={src}
+        alt={alt}
+        className={`${id % 2 !== 1 ? styles.gridChildA : styles.gridChildB}`}
+      />
     </div>
   )
 }
