@@ -1,9 +1,8 @@
 .cardsContainer {
-  $length: 8rem;
   display: flex;
   // justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: $length;
-  margin-bottom: $length;
+  gap: 10rem;
+  margin-bottom: 6rem;
 }

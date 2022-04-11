@@ -1,17 +1,14 @@
 @import './variable.module.scss';
 
 .container {
-  margin-bottom: 5rem;
 }
 .header {
   background-color: $baseDark;
-  height: $sectionHeight;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
 .cardSection {
   // height: $sectionHeight;
-  // margin-top: 30rem;
-  padding: 2rem;
+  padding: 6rem;
 
   & > h1 {
     color: $baseDark;
@@ -26,4 +23,8 @@
   // height: calc($sectionHeight + 20rem);
   padding: 6rem 1rem;
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+}
+
+.contactSection {
+  height: $sectionHeight;
 }

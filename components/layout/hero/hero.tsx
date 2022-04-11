@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import styles from './hero.module.scss'
 import { Bryon } from 'components'
-import { Circle, Linkedin, Github, Twitter } from 'icons'
+import { Linkedin, Github, Twitter } from 'icons'
 
 //interface Props {
 //	data: string

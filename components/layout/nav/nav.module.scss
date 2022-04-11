@@ -1,0 +1,48 @@
+@import 'styles/variable.module.scss';
+
+.navContainer {
+  display: flex;
+  align-content: center;
+  padding: 2rem 4rem;
+
+  & svg {
+    width: 6rem;
+    height: auto;
+    color: $blue;
+
+    & > g {
+      fill: $blue;
+    }
+  }
+
+  & > ul {
+    color: $blue;
+    display: flex;
+    gap: 0 2rem;
+    margin-left: auto;
+    list-style-type: none;
+    li {
+      a:link {
+        text-decoration: none;
+        color: $blue;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: $red;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      a:active {
+        text-decoration: none;
+      }
+    }
+
+    li:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import 'styles/variable.module.scss';
+
+.footerContainer {
+  background-color: $baseDark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
