@@ -94,7 +94,7 @@ export const Cards: NextPage = () => {
       src: '/cards/crownClothing/crownClothing.png',
       alt: 'image of clothing store',
       title: 'Crown Clothing',
-      text: '"Complete React Developer" Udemy course. Clothing Store with modern sign-in, editable shopping cart and stripe payments checkout. Hosted on Heroku.',
+      text: '"Complete React Developer" Udemy course. Clothing Store with modern sign-in, editable shopping cart and stripe checkout. Hosted on Heroku.',
       icons: [
         { Icon: Html5, msg: 'HTML' },
         { Icon: Css3, msg: 'CSS' },

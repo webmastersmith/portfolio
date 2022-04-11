@@ -18,17 +18,32 @@
     flex-direction: column;
     align-items: flex-start;
 
+    @keyframes show {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
     p {
       color: $blue;
       margin-bottom: 0.5rem;
+      opacity: 0;
+      animation: show 1s ease 1s 1 normal forwards;
+      // animation: name duration timing-function delay iteration-count direction fill-mode;
     }
 
     h1 {
+      opacity: 0;
       font-size: 3rem;
       font-weight: bold;
       margin-bottom: 1rem;
+      animation: show 1s ease 2s 1 normal forwards;
     }
     h2 {
+      opacity: 0;
+      animation: show 1s ease 3s 1 normal forwards;
       margin-bottom: 2rem;
       span {
         color: $red;
@@ -44,12 +59,33 @@
     align-items: center;
 
     svg {
+      opacity: 0;
       flex-shrink: 0;
+      animation: show 1s ease 4s 1 normal forwards;
     }
   }
   .line {
+    opacity: 0;
     border-bottom: 1px solid $blue;
     width: 50%;
+    // animation: slide 1s ease ;
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
+}
+@keyframes slide {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+  100% {
+    width: 200px;
+    opacity: 1;
   }
 }
 

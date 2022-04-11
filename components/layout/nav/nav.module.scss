@@ -9,9 +9,15 @@
     width: 6rem;
     height: auto;
     color: $blue;
+    &:hover {
+      color: $baseLight;
+    }
 
     & > g {
       fill: $blue;
+      &:hover {
+        fill: $baseLight;
+      }
     }
   }
 
@@ -23,8 +29,8 @@
     list-style-type: none;
     li {
       a:link {
-        text-decoration: none;
         color: $blue;
+        text-decoration: none;
       }
 
       a:visited {
@@ -34,6 +40,7 @@
 
       a:hover {
         text-decoration: none;
+        color: $baseLight;
       }
 
       a:active {

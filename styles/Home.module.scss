@@ -2,6 +2,7 @@
 
 .container {
 }
+
 .header {
   background-color: $baseDark;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
@@ -16,6 +17,19 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 3rem;
+    opacity: 0;
+    animation: up 1s ease 5s 1 normal forwards;
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+  }
+}
+@keyframes up {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY((0px));
+    opacity: 1;
   }
 }
 .iconSection {

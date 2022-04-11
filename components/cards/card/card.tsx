@@ -54,7 +54,7 @@ export const Card: NextPage<Props> = ({
   return (
     <div
       className={`${styles.cardContainer} ${
-        inView ? styles.cardContainerAnimate : styles.cardContainerNoAnimate
+        inView ? styles.cardContainerAnimate : ''
       }`}
       ref={objRef}
     >
