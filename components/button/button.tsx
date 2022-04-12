@@ -11,7 +11,7 @@ export const Button: NextPage<Props> = ({ page }) => {
   return (
     <Link href={page}>
       <a>
-        <button className={styles.button}>VIEW PROJECT</button>
+        <button className={styles.glow}>VIEW PROJECT</button>
       </a>
     </Link>
   )

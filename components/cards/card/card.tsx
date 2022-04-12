@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
-import Link from 'next/link'
-import { SVGProps, useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import styles from './card.module.scss'
 import { Button } from 'components'
 
@@ -27,7 +26,6 @@ export const Card: NextPage<Props> = ({
   page,
   icons,
   id,
-  children,
 }) => {
   const [inView, setInView] = useState(false) //state change loads image.
   const objRef = useRef(null) //same as document.querySelector('img')
@@ -61,6 +59,7 @@ export const Card: NextPage<Props> = ({
       }`}
       ref={objRef}
     >
+      {/* Card Text */}
       <div
         className={`${styles.textContainer} ${
           id % 2 === 1 ? styles.gridChildA : styles.gridChildB
@@ -81,6 +80,7 @@ export const Card: NextPage<Props> = ({
         <Button page={page} />
       </div>
 
+      {/* Card Image */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
