@@ -37,13 +37,21 @@
   }
 
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(75px);
 }
-$time: 0.5s;
 .cardContainerAnimate {
-  transform: translateY(0px);
-  transition: transform $time ease-in-out;
-  opacity: 1;
+  // transition: transform 1s ease;
+  animation: show 1s ease 0s 1 normal forwards;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(75px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .gridChildA {

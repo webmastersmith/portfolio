@@ -19,7 +19,23 @@ $size: 6rem;
       // color: #80d39b;
     }
   }
+  opacity: 0;
+  transform: translateY(75px);
 }
+.iconAnimation {
+  animation: show 1s ease 0s 1 normal forwards;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(75px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .iconInnerContainer {
   width: 100%;
   display: flex;
