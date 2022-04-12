@@ -1,0 +1,7 @@
+@import 'styles/variable.module.scss';
+
+.header {
+  background-color: $baseDark;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  height: $sectionHeight;
+}

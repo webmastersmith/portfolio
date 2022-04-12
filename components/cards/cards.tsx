@@ -60,6 +60,7 @@ export const Cards: NextPage = () => {
       src: '/cards/addressHelper/addressHelper.png',
       alt: 'image of address helper website',
       title: 'Address Helper',
+      page: 'address-helper',
       text: 'Webscraper, Database, to static website. Built to easily find property owners address, property image and property owner phone numbers. Hosted on an HTTPS Apache server.',
       icons: [
         { Icon: Html5, msg: 'HTML' },
@@ -79,6 +80,7 @@ export const Cards: NextPage = () => {
       src: '/cards/candyCrush/candyCrush.png',
       alt: 'image of candy crush game',
       title: 'Candy Crush',
+      page: 'candy-crush',
       text: 'Candy Crush game inspired by Anna Kubow. Built with React Hooks. Hosted on Github pages.',
       icons: [
         { Icon: Html5, msg: 'HTML' },
@@ -94,6 +96,7 @@ export const Cards: NextPage = () => {
       src: '/cards/crownClothing/crownClothing.png',
       alt: 'image of clothing store',
       title: 'Crown Clothing',
+      page: 'crown-clothing',
       text: '"Complete React Developer" Udemy course. Clothing Store with modern sign-in, editable shopping cart and stripe checkout. Hosted on Heroku.',
       icons: [
         { Icon: Html5, msg: 'HTML' },

@@ -6,40 +6,53 @@ import styles from 'styles/Home.module.scss'
 
 const Home: NextPage = () => {
   const [inView, setInView] = useState(false) //state change loads image.
-  const objRef = useRef(null) //same as document.querySelector('img')
+  const objRef = useRef<HTMLDivElement>(null) //same as document.querySelector('img')
 
-  useEffect(() => {
+  const [show, setShow] = useState(false) //state change loads image.
+  const h1Ref = useRef<HTMLHeadingElement>(null) //same as document.querySelector('img')
+
+  function obs(
+    fn: React.Dispatch<React.SetStateAction<boolean>>,
+    ref: React.RefObject<HTMLElement>
+  ) {
     const observer = new IntersectionObserver(
       (entries, obs) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            setInView(true)
+            fn(true)
             obs.disconnect() //disconnect once in view.
-          } else setInView(false)
+          } else fn(false)
         }
       },
       {
         // rootMargin: '1000px',  //consider isIntersecting 1000px before item reaches viewport.
       }
     )
-    if (objRef.current) {
-      observer.observe(objRef?.current) //attach observer to 'objRef'
+    if (ref.current) {
+      observer.observe(ref?.current) //attach observer to 'objRef'
+      console.log(ref?.current)
     }
     return () => {
       observer.disconnect() //when unmount disconnect observer
     }
+  }
+  useEffect(() => {
+    // set observers
+    obs(setInView, objRef)
+    obs(setShow, h1Ref)
   }, [])
 
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <Nav />
         <Hero />
       </header>
 
       <main>
         <section className={styles.cardSection} id="cardSection">
-          <h1>My Current Projects</h1>
+          <h1 ref={h1Ref} className={`${show ? styles.h1Animation : ''}`}>
+            My Current Projects
+          </h1>
           <Cards />
         </section>
         <section className={styles.iconSection} id="iconSection">
@@ -60,7 +73,6 @@ const Home: NextPage = () => {
             </a>
           </div>
         </section>
-        <Footer />
       </main>
     </div>
   )

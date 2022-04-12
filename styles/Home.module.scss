@@ -18,9 +18,12 @@
     text-align: center;
     margin-bottom: 3rem;
     opacity: 0;
-    animation: up 1s ease 5s 1 normal forwards;
-    // animation: name duration timing-function delay iteration-count direction fill-mode;
+    transform: translateY(30px);
   }
+}
+.h1Animation {
+  // animation: name duration timing-function delay iteration-count direction fill-mode;
+  animation: up 1s ease 0s 1 normal forwards;
 }
 @keyframes up {
   0% {

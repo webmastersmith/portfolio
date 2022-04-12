@@ -18,12 +18,12 @@ export const Nav: NextPage = () => {
       </Link>
       <ul>
         <li>
-          <Link href="#iconSection">
+          <Link href="/#iconSection">
             <a>skills</a>
           </Link>
         </li>
         <li>
-          <Link href="#contactSection">
+          <Link href="/#contactSection">
             <a>contact</a>
           </Link>
         </li>

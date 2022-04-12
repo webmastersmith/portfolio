@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import { SVGProps, useState, useRef, useEffect } from 'react'
 import styles from './card.module.scss'
 import { Button } from 'components'
@@ -7,6 +8,7 @@ interface Props {
   src: string
   alt: string
   title: string
+  page: string
   text: string
   icons: Icon[]
   id: number
@@ -22,6 +24,7 @@ export const Card: NextPage<Props> = ({
   alt,
   title,
   text,
+  page,
   icons,
   id,
   children,
@@ -75,7 +78,7 @@ export const Card: NextPage<Props> = ({
           })}
         </div>
         <p>{text}</p>
-        <Button />
+        <Button page={page} />
       </div>
 
       {/* eslint-disable-next-line @next/next/no-img-element */}
