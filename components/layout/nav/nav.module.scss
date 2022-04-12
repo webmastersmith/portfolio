@@ -1,12 +1,23 @@
 @import 'styles/variable.module.scss';
 
 .navContainer {
-  display: flex;
-  align-content: center;
-  padding: 2rem 4rem;
   background-color: $baseDark;
+  position: relative;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  // padding-top: 3rem;
+  // margin-top: auto;
+  // margin-bottom: auto;
+}
+.navInnerContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 4rem;
 
-  & svg {
+  & > a > svg {
     width: 6rem;
     height: auto;
     color: $blue;
@@ -54,3 +65,10 @@
     }
   }
 }
+// .angle {
+//   position: absolute;
+//   bottom: -15px;
+//   left: 0;
+//   width: 100%;
+//   height: 2rem;
+// }

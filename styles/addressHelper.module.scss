@@ -1,7 +1,30 @@
 @import 'styles/variable.module.scss';
 
-.header {
-  background-color: $baseDark;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-  height: $sectionHeight;
+// .header {
+//   background-color: $baseDark;
+//   clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+//   // height: $sectionHeight;
+// }
+
+.addressHelperContainer {
+  color: $baseDark;
+  padding: 0 2rem;
+  padding-top: 6rem;
+  position: relative;
+}
+.heading {
+  width: 600px;
+  & > h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  & > p {
+    padding-top: 1rem;
+  }
+}
+
+.angle {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

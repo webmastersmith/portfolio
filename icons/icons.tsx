@@ -1313,3 +1313,35 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
+export function Top(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      version="1.1"
+      viewBox="0 0 150 4"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <g transform="matrix(3.7796 0 0 7.559 -321.06 -1134.5)">
+        <path d="m84.945 150.61v-0.52917h39.687z" fill="#0e0d0d" />
+      </g>
+    </svg>
+  )
+}
+
+export function Bottom(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width="39.687mm"
+      height="4.2333mm"
+      version="1.1"
+      viewBox="0 0 39.687 4.2333"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <g transform="translate(-50.903 -154.99)">
+        <path d="m50.907 159.19 39.647-4.1565v4.1565z" fill="#0e0d0d" />
+      </g>
+    </svg>
+  )
+}
