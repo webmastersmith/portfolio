@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { useState, useRef, useEffect } from 'react'
-
-import { Hero, Icons, Cards, Nav, Footer } from 'components'
+import { Hero, Icons, Cards } from 'components'
+import { Top, Bottom } from 'icons'
 import styles from 'styles/Home.module.scss'
 
 const Home: NextPage = () => {

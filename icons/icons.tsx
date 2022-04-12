@@ -1318,11 +1318,11 @@ export function Top(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       version="1.1"
-      viewBox="0 0 150 4"
+      viewBox="0 0 150 6"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g transform="matrix(3.7796 0 0 7.559 -321.06 -1134.5)">
+      <g transform="matrix(3.7796 0 0 11.339 -321.06 -1701.7)">
         <path d="m84.945 150.61v-0.52917h39.687z" fill="#0e0d0d" />
       </g>
     </svg>
@@ -1332,15 +1332,13 @@ export function Top(props: SVGProps<SVGSVGElement>) {
 export function Bottom(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="39.687mm"
-      height="4.2333mm"
       version="1.1"
-      viewBox="0 0 39.687 4.2333"
+      viewBox="0 0 150 6"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g transform="translate(-50.903 -154.99)">
-        <path d="m50.907 159.19 39.647-4.1565v4.1565z" fill="#0e0d0d" />
+      <g transform="translate(-50.906 -155.06)">
+        <path d="m50.906 161.06 150-6v6z" fill="#0e0d0d" />
       </g>
     </svg>
   )

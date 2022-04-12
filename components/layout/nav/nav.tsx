@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import styles from './nav.module.scss'
-import { Logo, Top } from 'icons'
+import { Logo } from 'icons'
 import Link from 'next/link'
 
 //interface Props {
@@ -30,8 +30,6 @@ export const Nav: NextPage = () => {
           </li>
         </ul>
       </div>
-
-      {/* <Top className={styles.angle} /> */}
     </div>
   )
 }
