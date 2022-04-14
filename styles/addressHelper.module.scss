@@ -11,19 +11,153 @@
   padding: 8rem 2rem;
   position: relative;
 }
-.heading {
-  width: 600px;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 8rem;
+}
+
+.text {
+  max-width: 700px;
+
   & > h1 {
     font-size: 2.5rem;
     font-weight: bold;
   }
   & > p {
-    padding-top: 1rem;
+    padding-top: 2rem;
+    line-height: 1.8;
   }
 }
 
+.textColumn {
+  p:first-child {
+    padding-bottom: 2rem;
+  }
+}
+
+.headerImg {
+  width: 95%;
+  margin: 0 auto;
+
+  & > img {
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%;
+    // box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4), 8px 8px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0 2px;
+
+  th,
+  td {
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+  }
+
+  a:link {
+    color: $blue;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:visited {
+    color: $red;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+  }
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: $baseDark;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  svg {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.split {
+  display: flex;
+  gap: 2rem;
+  & > div {
+    width: 50%;
+  }
+}
+
+.cardImg {
+  width: 50%;
+  margin: 0 auto;
+
+  & > img {
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%;
+    // box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4), 8px 8px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+
+  & > h3 {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.h2 {
+  font-weight: bold;
+}
+
+// svg angle
 .angle {
   position: absolute;
   top: -1px;
   left: 0;
+}
+
+.contactSection {
+  color: $baseDark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  div {
+    // padding-top: 5rem;
+    transform: translateY(30px);
+    opacity: 0;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    p {
+      width: 70%;
+      margin-bottom: 1rem;
+    }
+  }
 }

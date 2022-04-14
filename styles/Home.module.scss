@@ -1,8 +1,5 @@
 @import './variable.module.scss';
 
-.container {
-}
-
 .header {
   background-color: $baseDark;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
@@ -67,22 +64,22 @@
   }
 }
 
-.contactAnimation {
-  animation: show 1s ease 0s 1 normal forwards;
-}
-@keyframes show {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+// .contactAnimation {
+//   animation: show 1s ease 0s 1 normal forwards;
+// }
+// @keyframes show {
+//   0% {
+//     opacity: 0;
+//     transform: translateY(30px);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
 
-.email {
-  text-decoration: underline;
-  color: $red;
-  cursor: pointer;
-}
+// .email {
+//   text-decoration: underline;
+//   color: $red;
+//   cursor: pointer;
+// }

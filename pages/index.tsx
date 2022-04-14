@@ -1,13 +1,10 @@
 import type { NextPage } from 'next'
 import { useState, useRef, useEffect } from 'react'
-import { Hero, Icons, Cards } from 'components'
-import { Top, Bottom } from 'icons'
+import { Hero, Icons, Cards, Contact } from 'components'
+// import { Top, Bottom } from 'icons'
 import styles from 'styles/Home.module.scss'
 
 const Home: NextPage = () => {
-  const [inView, setInView] = useState(false) //state change loads image.
-  const objRef = useRef<HTMLDivElement>(null) //same as document.querySelector('img')
-
   const [show, setShow] = useState(false) //state change loads image.
   const h1Ref = useRef<HTMLHeadingElement>(null) //same as document.querySelector('img')
 
@@ -38,7 +35,6 @@ const Home: NextPage = () => {
   }
   useEffect(() => {
     // set observers
-    obs(setInView, objRef)
     obs(setShow, h1Ref)
   }, [])
 
@@ -59,19 +55,7 @@ const Home: NextPage = () => {
           <Icons />
         </section>
         <section className={styles.contactSection} id="contactSection">
-          <div
-            className={`${inView ? styles.contactAnimation : ''}`}
-            ref={objRef}
-          >
-            <h1>Let&apos;s Build Something Together</h1>
-            <p>
-              Feel free to reach out if you&apos;re looking for a developer,
-              have a question, or just want to connect.
-            </p>
-            <a href="mailto: bryon@smithauto.us" className={styles.email}>
-              bryon@smithauto.us
-            </a>
-          </div>
+          <Contact />
         </section>
       </main>
     </div>
