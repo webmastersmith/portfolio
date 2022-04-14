@@ -35,13 +35,9 @@ const CandyCrush: NextPage = () => {
     { Icon: Css3, msg: 'CSS' },
     { Icon: Sass, msg: 'Sass' },
     { Icon: Js, msg: 'JavaScript' },
-    { Icon: Typescript, msg: 'TypeScript' },
     { Icon: React, msg: 'React' },
-    { Icon: Nextjs, msg: 'NextJS' },
-    { Icon: Node, msg: 'Node' },
-    { Icon: Mongodb, msg: 'MongoDB' },
-    { Icon: Puppeteer, msg: 'Puppeteer' },
-    { Icon: Apache, msg: 'Apache' },
+    { Icon: CreateReactApp, msg: 'Create React App' },
+    { Icon: Github, msg: 'Github Pages' },
   ]
 
   return (
@@ -50,14 +46,12 @@ const CandyCrush: NextPage = () => {
 
       <section className={styles.section}>
         <div className={styles.text}>
-          <h1>Lufkin Address Helper</h1>
+          <h1>Candy Crush</h1>
           <p>
-            Lufkin Address Helper is a Nextjs/React Application built for static
-            served html pages. I built this project from scratch using
-            Nextjs/React, Typescript, MongoDB, and Puppeteer. This application
-            requires a lot of heavy lifting at build time to create fast
-            loading, static html pages that do not have to have a dedicated
-            database server.
+            This Candy Crush game was inspired by Ania Kubow. I improved upon
+            her original JS and css code by porting over to a React Application.
+            This project is a simple and pure React application, but
+            demonstrates the speed of react over raw JS using setTimeout.
           </p>
         </div>
 
@@ -68,11 +62,11 @@ const CandyCrush: NextPage = () => {
             <th>View</th>
           </tr>
           <tr>
-            <td>Static Html Pages</td>
-            <td>Nextjs/React</td>
+            <td>SPA</td>
+            <td>React</td>
             <td className={styles.site}>
               <a
-                href="https://tapp.smithauto.us/"
+                href="https://webmastersmith.github.io/candy-crush-app/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -81,24 +75,18 @@ const CandyCrush: NextPage = () => {
             </td>
           </tr>
           {/* prettier-ignore */}
-          <tr><td></td><td>Typescript</td><td></td></tr>
+          <tr><td></td><td>Create React App</td><td></td></tr>
           {/* prettier-ignore */}
           <tr><td></td><td>Sass</td><td></td></tr>
           {/* prettier-ignore */}
-          <tr><td></td><td>Node</td><td></td></tr>
-          {/* prettier-ignore */}
-          <tr><td></td><td>Puppeteer</td><td></td></tr>
-          {/* prettier-ignore */}
-          <tr><td></td><td>MongoDB</td><td></td></tr>
-          {/* prettier-ignore */}
-          <tr><td></td><td>Apache Server</td><td></td></tr>
+          <tr><td></td><td>Github Pages</td><td></td></tr>
         </tbody>
 
         {/* image */}
         <div className={styles.headerImg}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/AddressHelper/addressHelperIndexPageWide.png"
+            src="/candyCrush/candyCrush.png"
             alt="image of lufkin address helper website"
           />
         </div>
@@ -108,24 +96,13 @@ const CandyCrush: NextPage = () => {
         <div className={styles.text}>
           <h2 className={styles.h2}>Project Purpose and Goal</h2>
           <p>
-            I started this project at the beginning of the covid pandemic.
-            It&apos;s purpose was to easily provide the contact information for
-            properties in the area. I completely rebuilt the project three times
-            before the final iteration of the site was done. The first project
-            was a simple card design built with raw html, js, and css. It only
-            showed the owner contact information. The second rebuild was done
-            with the react framework. I added google maps photos and additional
-            land information for each location. All the page information was in
-            a JSON file and would have to be individually loaded into the page.
-            The third rebuild was by far the largest and most complex, as it
-            includes all the above and removed the need for JSON data file. It
-            uses a mongodb server at build time to populate into raw html.
-          </p>
-
-          <p>
-            The final goal was to have a fully static html site that could be
-            loaded like any webpage without the need for a special node server
-            or database service.
+            This was a fun project that helped me learn React hooks, while
+            building a simple game. I challenged myself with learning new
+            memoization techniques by taking advantage of React&apos;s
+            useCallback, useEffect, useMemo and useState hooks. The original
+            tutorial by Ania Kubow used setTimeout to control timing. This
+            needlessly wasted UI renders. By using useEffect and useState, I was
+            able to reduce much of the needless UI rendering.
           </p>
         </div>
       </section>
@@ -145,20 +122,17 @@ const CandyCrush: NextPage = () => {
           </div>
           <div className={styles.textColumn}>
             <p>
-              Nextjs/React with Typescript made the most sense for this web
-              application because it&apos;s ability to export static html files
-              dynamically. The backend data came from Node and Google&apos;s
-              Puppeteer web scraper. The data was stored in a local MongoDB
-              database server. The chosen platforms were used because of the
-              smooth integration between them. All React components are built
-              with a functional style.
+              Create React App&apos;s ability to get up an running without much
+              configuration and React&apos;s ability to handle state quickly and
+              efficiently made the most sense for this web application. All
+              React components are built with a functional style. Game state was
+              kept with React useState.
             </p>
             <p>
-              React hooks and session storage are also used throughout the
-              project to maintain state when the page cards are deleted. State
-              management is Redux-ToolKit, due to it&apos;s rock solid features
-              and ease of use. Because this is a personal project, I host it
-              locally on my person web/email server.
+              To keep a clean code base and separate the logic from the style,
+              CSS modules were used along with SASS. SASS added css rule nesting
+              logic, reusable variables, and mixins without adding page bloat to
+              the code.
             </p>
           </div>
         </div>
@@ -167,19 +141,19 @@ const CandyCrush: NextPage = () => {
       <section className={styles.section}>
         <div className={styles.split}>
           <div className={styles.cardImg}>
-            <h3>View Mode</h3>
+            <h3>Raw JS setInterval</h3>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/AddressHelper/addressHelperCard.png"
-              alt="image of address helper card"
+              src="/candyCrush/setInterval.png"
+              alt="image of candy crush game with set Interval"
             />
           </div>
           <div className={styles.cardImg}>
-            <h3>Search Mode</h3>
+            <h3>React Memoization</h3>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/AddressHelper/addressHelperCardSearch.png"
-              alt="image of address helper search card"
+              src="/candyCrush/react.png"
+              alt="image of candy crush game with react framework improvements"
             />
           </div>
         </div>
@@ -189,18 +163,22 @@ const CandyCrush: NextPage = () => {
         <div className={styles.text}>
           <h2 className={styles.h2}>Problems and Thought Process</h2>
           <p>
-            Like most projects, I ran into a few bumps along the way, one
-            particularly difficult area was organization and structure of the
-            code. Because of this project&apos;s size, I realized how important
-            maintaining an organized structure would be.
+            The biggest challenge of this project was using React memoization
+            techniques effectively. VS code linting helped me improve
+            memoization techniques for non-primitives (functions, arrays,
+            objects). I was able to avoid unnecessary expensive UI renders with
+            effective use of if statements. Other improvements I made was to
+            improve game UI response across multiple device platforms by proper
+            use of the HTML5 Drag Drop API and the logic to control UI renders
+            and adding DragDropTouch.js to translate HTML5 DragDrop API for
+            mobile browsers that don&apos;t support the API.
           </p>
 
           <p>
             I worked hard to keep functional components pure and reusable as
-            much possible and utilized props for many slight variations. I also
-            used sass with css modules, because of the separation between JSX
-            and style. This made the code much cleaner and prevented css
-            specificity issues.
+            much possible and keep game logic simple. I also used sass with css
+            modules, because of the separation between JSX and style. This made
+            the code much cleaner and prevented css specificity issues.
           </p>
         </div>
         {/* image */}
@@ -211,13 +189,10 @@ const CandyCrush: NextPage = () => {
           <h2 className={styles.h2}>Lessons Learned</h2>
           <p>
             The most important achievement I received from completing this App
-            is the pride in having an idea, building the idea, and having it
-            work better than expected. Much knowledge and growth happened during
-            this journey. I have a better understanding of React Hooks, Git
-            management, MongoDB and Typescript. I also learned a lot regarding
-            code structure, organization and code refactoring. Typescript was a
-            blessing for me as it caught most errors in advance and prevented
-            multiple headaches.
+            is seeing the speed and reliability of React over raw JS. My
+            understanding of React hooks memoization techniques improved during
+            this build. I have a better understanding of React Hooks and Git
+            management.
           </p>
         </div>
       </section>
