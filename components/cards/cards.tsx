@@ -25,6 +25,7 @@ import {
   Stripe,
   Heroku,
   Github,
+  Pwa,
 } from 'icons'
 
 //interface Props {
@@ -105,7 +106,8 @@ export const Cards: NextPage = () => {
         { Icon: Js, msg: 'JavaScript' },
         { Icon: React, msg: 'React' },
         { Icon: CreateReactApp, msg: 'Create React App' },
-        { Icon: Stripe, msg: 'Stripe Payments' },
+        { Icon: Stripe, msg: 'Stripe Pay' },
+        { Icon: Pwa, msg: 'Progressive Web App' },
         { Icon: Heroku, msg: 'Heroku' },
       ],
     },

@@ -25,6 +25,7 @@ import {
   Heroku,
   Github,
   Top,
+  Pwa,
 } from 'icons'
 
 import styles from 'styles/walkThrough.module.scss'
@@ -33,15 +34,14 @@ const CrownClothing: NextPage = () => {
   const icons = [
     { Icon: Html5, msg: 'HTML' },
     { Icon: Css3, msg: 'CSS' },
-    { Icon: Sass, msg: 'Sass' },
+    { Icon: Sass, msg: 'SASS' },
     { Icon: Js, msg: 'JavaScript' },
-    { Icon: Typescript, msg: 'TypeScript' },
     { Icon: React, msg: 'React' },
-    { Icon: Nextjs, msg: 'NextJS' },
-    { Icon: Node, msg: 'Node' },
-    { Icon: Mongodb, msg: 'MongoDB' },
-    { Icon: Puppeteer, msg: 'Puppeteer' },
-    { Icon: Apache, msg: 'Apache' },
+    { Icon: CreateReactApp, msg: 'Create React App' },
+    { Icon: Firebase, msg: 'Firebase' },
+    { Icon: Stripe, msg: 'Stripe Pay' },
+    { Icon: Pwa, msg: 'Progressive Web App' },
+    { Icon: Heroku, msg: 'Heroku' },
   ]
 
   return (
@@ -50,14 +50,13 @@ const CrownClothing: NextPage = () => {
 
       <section className={styles.section}>
         <div className={styles.text}>
-          <h1>Lufkin Address Helper</h1>
+          <h1>Crown Clothing</h1>
           <p>
-            Lufkin Address Helper is a Nextjs/React Application built for static
-            served html pages. I built this project from scratch using
-            Nextjs/React, Typescript, MongoDB, and Puppeteer. This application
-            requires a lot of heavy lifting at build time to create fast
-            loading, static html pages that do not have to have a dedicated
-            database server.
+            Crown Clothing is a React Application built for a clothing store
+            demo. I built this project following a tutorial from a Udemy course
+            focusing on React, Firebase, Redux and Stripe for credit card
+            processing. This e-commerce application required a lot of heavy
+            lifting to create a universal cart and overall shopping experience.
           </p>
         </div>
 
@@ -68,11 +67,11 @@ const CrownClothing: NextPage = () => {
             <th>View</th>
           </tr>
           <tr>
-            <td>Static Html Pages</td>
-            <td>Nextjs/React</td>
+            <td>SPA</td>
+            <td>React</td>
             <td className={styles.site}>
               <a
-                href="https://tapp.smithauto.us/"
+                href="https://cc-bryon.herokuapp.com/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -81,25 +80,25 @@ const CrownClothing: NextPage = () => {
             </td>
           </tr>
           {/* prettier-ignore */}
-          <tr><td></td><td>Typescript</td><td></td></tr>
+          <tr><td></td><td>Create React App</td><td></td></tr>
           {/* prettier-ignore */}
-          <tr><td></td><td>Sass</td><td></td></tr>
+          <tr><td></td><td>SASS</td><td></td></tr>
           {/* prettier-ignore */}
-          <tr><td></td><td>Node</td><td></td></tr>
+          <tr><td></td><td>Firebase</td><td></td></tr>
           {/* prettier-ignore */}
-          <tr><td></td><td>Puppeteer</td><td></td></tr>
+          <tr><td></td><td>Stripe</td><td></td></tr>
           {/* prettier-ignore */}
-          <tr><td></td><td>MongoDB</td><td></td></tr>
+          <tr><td></td><td>Progressive Web App</td><td></td></tr>
           {/* prettier-ignore */}
-          <tr><td></td><td>Apache Server</td><td></td></tr>
+          <tr><td></td><td>Heroku Server</td><td></td></tr>
         </tbody>
 
         {/* image */}
         <div className={styles.headerImg}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/AddressHelper/addressHelperIndexPageWide.png"
-            alt="image of lufkin address helper website"
+            src="/crownClothing/crownClothing.png"
+            alt="image of crown clothing website"
           />
         </div>
       </section>
@@ -108,24 +107,14 @@ const CrownClothing: NextPage = () => {
         <div className={styles.text}>
           <h2 className={styles.h2}>Project Purpose and Goal</h2>
           <p>
-            I started this project at the beginning of the covid pandemic.
-            It&apos;s purpose was to easily provide the contact information for
-            properties in the area. I completely rebuilt the project three times
-            before the final iteration of the site was done. The first project
-            was a simple card design built with raw html, js, and css. It only
-            showed the owner contact information. The second rebuild was done
-            with the react framework. I added google maps photos and additional
-            land information for each location. All the page information was in
-            a JSON file and would have to be individually loaded into the page.
-            The third rebuild was by far the largest and most complex, as it
-            includes all the above and removed the need for JSON data file. It
-            uses a mongodb server at build time to populate into raw html.
+            This project was to demonstrate the React framework, Redux for state
+            management, Firebase for sign-in and Stripe for payments. It was a
+            complete project I did early on in my full stack training.
           </p>
 
           <p>
-            The final goal was to have a fully static html site that could be
-            loaded like any webpage without the need for a special node server
-            or database service.
+            The final goal was to have a fully e-commerce site demo that had the
+            potential to be converted into a production ready site.
           </p>
         </div>
       </section>
@@ -145,41 +134,73 @@ const CrownClothing: NextPage = () => {
           </div>
           <div className={styles.textColumn}>
             <p>
-              Nextjs/React with Typescript made the most sense for this web
-              application because it&apos;s ability to export static html files
-              dynamically. The backend data came from Node and Google&apos;s
-              Puppeteer web scraper. The data was stored in a local MongoDB
-              database server. The chosen platforms were used because of the
-              smooth integration between them. All React components are built
-              with a functional style.
+              React with Redux made the most sense for this web application
+              because it&apos;s production ready scalability and reliable state
+              management. Firebase was used for login authentication and
+              persistent cart storage. Stripe was chosen for it&apos;s cart
+              checkout SDK and developer friendly code.
             </p>
             <p>
-              React hooks and session storage are also used throughout the
-              project to maintain state when the page cards are deleted. State
-              management is Redux-ToolKit, due to it&apos;s rock solid features
-              and ease of use. Because this is a personal project, I host it
-              locally on my person web/email server.
+              Redux state management uses local storage and Firebase data base
+              storage for a seamless login cart experience. Heroku was used to
+              host the website because of it&apos;s Git integration.
             </p>
           </div>
         </div>
       </section>
 
       <section className={styles.section}>
+        {/* image row 1 */}
         <div className={styles.split}>
           <div className={styles.cardImg}>
-            <h3>View Mode</h3>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/AddressHelper/addressHelperCard.png"
-              alt="image of address helper card"
+              src="/crownClothing/hats.png"
+              alt="image of hats merchandise"
             />
           </div>
           <div className={styles.cardImg}>
-            <h3>Search Mode</h3>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/AddressHelper/addressHelperCardSearch.png"
-              alt="image of address helper search card"
+              src="/crownClothing/jackets.png"
+              alt="image of jackets merchandise"
+            />
+          </div>
+        </div>
+
+        {/* images row 2 */}
+        <div className={styles.split}>
+          <div className={styles.cardImg}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/crownClothing/mens.png"
+              alt="image of hats merchandise"
+            />
+          </div>
+
+          <div className={styles.cardImg}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/crownClothing/signin.png"
+              alt="image of jackets merchandise"
+            />
+          </div>
+        </div>
+
+        {/* images row 3 */}
+        <div className={styles.split}>
+          <div className={styles.cardImg}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/crownClothing/cart.png"
+              alt="image of jackets merchandise"
+            />
+          </div>
+          <div className={styles.cardImg}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/crownClothing/checkout.png"
+              alt="image of hats merchandise"
             />
           </div>
         </div>
@@ -189,18 +210,17 @@ const CrownClothing: NextPage = () => {
         <div className={styles.text}>
           <h2 className={styles.h2}>Problems and Thought Process</h2>
           <p>
-            Like most projects, I ran into a few bumps along the way, one
-            particularly difficult area was organization and structure of the
-            code. Because of this project&apos;s size, I realized how important
-            maintaining an organized structure would be.
+            This project was massive and the only way to make it maintainable
+            was to focus on code organization and proper file structure. Some of
+            the course code was outdated, so I opted to learn by using modern
+            code versions, even though the learning curve was much steeper.
           </p>
 
           <p>
             I worked hard to keep functional components pure and reusable as
-            much possible and utilized props for many slight variations. I also
-            used sass with css modules, because of the separation between JSX
-            and style. This made the code much cleaner and prevented css
-            specificity issues.
+            much possible. I also used sass with css modules, because of the
+            separation between JSX and style. This made the code much cleaner
+            and prevented css specificity issues.
           </p>
         </div>
         {/* image */}
@@ -210,14 +230,15 @@ const CrownClothing: NextPage = () => {
         <div className={styles.text}>
           <h2 className={styles.h2}>Lessons Learned</h2>
           <p>
-            The most important achievement I received from completing this App
-            is the pride in having an idea, building the idea, and having it
-            work better than expected. Much knowledge and growth happened during
-            this journey. I have a better understanding of React Hooks, Git
-            management, MongoDB and Typescript. I also learned a lot regarding
-            code structure, organization and code refactoring. Typescript was a
-            blessing for me as it caught most errors in advance and prevented
-            multiple headaches.
+            With a project with so many features it can be easy to get lost in
+            the code. The most important ones involved my newfound understanding
+            of React Hooks, Git management, Firebase integration, and Stripe
+            integration. As my first large project using React, I learned a lot
+            of lessons regarding code structure and organization. When I first
+            began, I would write sloppy code and move on, but now I know how
+            doing so can come back to bite you; I now spend a lot more time
+            refactoring and improving every line I code I write, for the best
+            readability and far fewer headaches.
           </p>
         </div>
       </section>

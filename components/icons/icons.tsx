@@ -24,6 +24,7 @@ import {
   Regex,
   CreateReactApp,
   StyledComponents,
+  Pwa,
 } from 'icons'
 
 //interface Props {
@@ -80,6 +81,7 @@ export const Icons: NextPage = () => {
     { Icon: Bash, msg: 'Bash Shell' },
     { Icon: Gimp, msg: 'Gimp' },
     { Icon: Regex, msg: 'RegEx' },
+    { Icon: Pwa, msg: 'Progressive Web App' },
   ]
 
   return (
