@@ -41,45 +41,8 @@
 
 .contactSection {
   height: $sectionHeight;
-  color: $baseDark;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  div {
-    // padding-top: 5rem;
-    transform: translateY(30px);
-    opacity: 0;
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    p {
-      width: 70%;
-      margin-bottom: 1rem;
-    }
-  }
 }
-
-// .contactAnimation {
-//   animation: show 1s ease 0s 1 normal forwards;
-// }
-// @keyframes show {
-//   0% {
-//     opacity: 0;
-//     transform: translateY(30px);
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
-
-// .email {
-//   text-decoration: underline;
-//   color: $red;
-//   cursor: pointer;
-// }

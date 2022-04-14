@@ -36,7 +36,12 @@ export const Contact: NextPage = () => {
   }, [])
 
   return (
-    <div className={`${inView ? styles.contactAnimation : ''}`} ref={objRef}>
+    <div
+      className={`${styles.contactContainer} ${
+        inView ? styles.contactAnimation : ''
+      }`}
+      ref={objRef}
+    >
       <h1>Let&apos;s Build Something Together</h1>
       <p>
         Feel free to reach out if you&apos;re looking for a developer, have a

@@ -27,7 +27,7 @@ import {
   Top,
 } from 'icons'
 
-import styles from 'styles/addressHelper.module.scss'
+import styles from 'styles/walkThrough.module.scss'
 
 const AddressHelper: NextPage = () => {
   const icons = [
