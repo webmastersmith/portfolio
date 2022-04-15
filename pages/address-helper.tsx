@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import { useState, useEffect, useRef } from 'react'
 import { Contact } from 'components'
 import {
   Html5,
@@ -30,6 +31,61 @@ import {
 import styles from 'styles/walkThrough.module.scss'
 
 const AddressHelper: NextPage = () => {
+  const [inView, setInView] = useState<boolean>(false)
+  const objRef = useRef(null)
+
+  async function celebrate() {
+    // prettier-ignore
+    const confetti = (await import('canvas-confetti')).default
+    var duration = 5 * 1000
+    var animationEnd = Date.now() + duration
+    var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 }
+
+    function randomInRange(min: number, max: number) {
+      return Math.random() * (max - min) + min
+    }
+
+    var interval: NodeJS.Timer = setInterval(function () {
+      var timeLeft = animationEnd - Date.now()
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval)
+      }
+
+      var particleCount = 50 * (timeLeft / duration)
+      // since particles fall down, start a bit higher than random
+      confetti(
+        Object.assign({}, defaults, {
+          particleCount,
+          origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+        })
+      )
+      confetti(
+        Object.assign({}, defaults, {
+          particleCount,
+          origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+        })
+      )
+    }, 250)
+  }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, obs) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          celebrate()
+          obs.disconnect() //disconnect once in view.
+        } else setInView(false)
+      }
+    })
+    if (objRef.current) {
+      observer.observe(objRef?.current) //attach observer to 'objRef'
+    }
+    return () => {
+      observer.disconnect() //when unmount disconnect observer
+    }
+  }, [])
+
   const icons = [
     { Icon: Html5, msg: 'HTML' },
     { Icon: Css3, msg: 'CSS' },
@@ -220,6 +276,14 @@ const AddressHelper: NextPage = () => {
               Typescript was a blessing for me as it caught most errors in
               advance and prevented multiple headaches.
             </p>
+          </div>
+          <div className={styles.lighthouse} ref={objRef}>
+            <h3>This is my first Lighthouse score of 100! &#x1F389;</h3>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/AddressHelper/lighthouseScoreHomepage.png"
+              alt="image of Lighthouse score of 100"
+            />
           </div>
         </section>
         <section className={styles.contactSection}>
