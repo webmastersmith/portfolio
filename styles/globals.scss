@@ -1,5 +1,15 @@
 @import './variable.module.scss';
 
+:root {
+  --fontFamily: 'Caveat';
+}
+@font-face {
+  font-family: Caveat;
+  src: url('/fonts/Caveat.ttf');
+  font-display: optional;
+  font-weight: 400;
+}
+
 *,
 *::before,
 *::after {
@@ -9,30 +19,14 @@
   margin: 0;
 }
 
-// body::-webkit-scrollbar {
-//   width: 0.5rem;
-//   // height: 0.5rem;
-// }
-
-// body::-webkit-scrollbar-track {
-//   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-//   // background-color: $baseDark;
-//   border-radius: 10px;
-// }
-
-// body::-webkit-scrollbar-thumb {
-//   background-color: $baseDark;
-//   // outline: 1px solid $baseLight;
-//   border-radius: 10px;
-// }
-
 html,
 body,
 #root {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Muli, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  // font-family: Lobster;
+  font-family: -apple-system, BlinkMacSystemFont, Muli, Segoe UI, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: $baseLight;
   color: $baseLight;
 }
@@ -120,12 +114,3 @@ h6 {
 }
 /* Bellow my custom addons*/
 /* to use variables: var(--red, fallback) */
-:root {
-  // --baseColor: #508aa8;
-  // --baseColor: #5ad2f4;
-  // --baseColor: #da4167;
-  // --baseHue: 120;
-
-  // --single-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
-}
-/* className="container" */

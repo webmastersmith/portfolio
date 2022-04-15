@@ -1,14 +1,26 @@
+@import 'styles/mixins.scss';
+
 .container {
   position: relative;
+  width: 225px;
+  height: 300px;
+  @include xs {
+    width: 300px;
+    height: 400px;
+  }
 }
 .bryon {
-  width: 300px;
-  height: 400px;
   margin-bottom: -1rem;
+  width: 100%;
+  height: 100%;
 }
 
 .orb {
   position: absolute;
-  top: 70px;
-  left: 34px;
+  top: 60px;
+  left: 24px;
+  @include xs {
+    top: 70px;
+    left: 34px;
+  }
 }

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { useState, useRef, useEffect } from 'react'
 import { Hero, Icons, Cards, Contact } from 'components'
-// import { Top, Bottom } from 'icons'
+import { Top, Bottom } from 'icons'
 import styles from 'styles/Home.module.scss'
 
 const Home: NextPage = () => {
@@ -50,11 +50,13 @@ const Home: NextPage = () => {
             My Current Projects
           </h1>
           <Cards />
+          <Bottom />
         </section>
         <section className={styles.iconSection} id="iconSection">
           <Icons />
         </section>
         <section className={styles.contactSection} id="contactSection">
+          <Top />
           <Contact />
         </section>
       </main>

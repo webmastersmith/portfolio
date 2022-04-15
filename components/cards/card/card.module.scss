@@ -1,16 +1,27 @@
 @import 'styles/variable.module.scss';
+@import 'styles/mixins.scss';
 
 .cardContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'a b';
-  width: 700px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'a'
+    'b';
+  max-width: 320px;
+  @include xs {
+    max-width: none;
+    width: 90%;
+  }
 
-  // grid-template-rows: 1fr, 1fr;
-  // grid-template-areas:
-  //   'a'
-  //   'b';
-  // width: 400px;
+  @include md {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'a b';
+    width: 700px;
+  }
+  @include lg {
+    width: 900px;
+  }
 
   // background-image: linear-gradient(
   //   45deg,
@@ -72,9 +83,16 @@
 
   & > h1 {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    @include xs {
+      font-size: 2rem;
+    }
   }
-  p {
+  & > p {
+    font-size: 0.8rem;
+    @include xs {
+      font-size: 1rem;
+    }
   }
 }
 .svgContainer {

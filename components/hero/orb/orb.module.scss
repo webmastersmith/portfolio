@@ -1,7 +1,8 @@
 // The particle orb is from https://codepen.io/natewiley/pen/GgONKy
 // best in chrome
+@import 'styles/mixins.scss';
+
 $total: 300; // total particles
-$orb-size: 50px;
 $particle-size: 2px;
 $time: 14s;
 $base-hue: 180; // change for diff colors (180 is nice)
@@ -42,6 +43,7 @@ $base-hue: 180; // change for diff colors (180 is nice)
   }
 
   @keyframes orbit#{$i} {
+    $orb-size: 30px;
     20% {
       opacity: 1; // fade in
     }
@@ -55,6 +57,25 @@ $base-hue: 180; // change for diff colors (180 is nice)
     100% {
       transform: rotateZ(-$z) rotateY($y) translateX(($orb-size * 3))
         rotateZ($z); // translateX * 3
+    }
+  }
+  @include xs {
+    @keyframes orbit#{$i} {
+      $orb-size: 50px;
+      20% {
+        opacity: 1; // fade in
+      }
+      30% {
+        transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z); // form orb
+      }
+      80% {
+        transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z); // hold orb state 30-80
+        opacity: 1; // hold opacity 20-80
+      }
+      100% {
+        transform: rotateZ(-$z) rotateY($y) translateX(($orb-size * 3))
+          rotateZ($z); // translateX * 3
+      }
     }
   }
 }

@@ -1,83 +1,113 @@
 @import 'styles/variable.module.scss';
+@import 'styles/mixins.scss';
 
 .hero {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   min-height: 30rem;
+  padding: 0;
+  @include lg {
+    padding: 0 5rem;
+  }
 }
+.innerHero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1023px;
+  width: 100%;
+}
+
 .textContainer {
+  flex: 1 1 auto;
+  @include xs {
+    flex: 1 0 auto;
+  }
   color: $baseLight;
-  width: 50%;
+  margin: 5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    @keyframes show {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-    p {
-      color: $blue;
-      margin-bottom: 0.5rem;
-      opacity: 0;
-      animation: show 1s ease 1s 1 normal forwards;
-      // animation: name duration timing-function delay iteration-count direction fill-mode;
-    }
-
-    h1 {
-      opacity: 0;
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      animation: show 1s ease 2s 1 normal forwards;
-    }
-    h2 {
-      opacity: 0;
-      animation: show 1s ease 3s 1 normal forwards;
-      margin-bottom: 2rem;
-      span {
-        color: $red;
-      }
-    }
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0.5rem;
+  @include xs {
+    margin: 0;
   }
 
-  .links {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-
-    svg {
-      opacity: 0;
-      flex-shrink: 0;
-      animation: show 1s ease 4s 1 normal forwards;
-    }
-  }
-  .line {
+  p {
+    color: $blue;
+    margin-bottom: 0.5rem;
     opacity: 0;
-    border-bottom: 1px solid $blue;
-    width: 50%;
-    // animation: slide 1s ease ;
-    animation-name: slide;
-    animation-duration: 1s;
-    animation-delay: 4s;
-    animation-direction: normal;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
+    animation: show 1s ease 1s 1 normal forwards;
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+  }
+
+  & > h1 {
+    opacity: 0;
+    font-size: 2rem;
+    @include xs {
+      font-size: 3rem;
+    }
+    font-weight: bold;
+    margin-bottom: 1rem;
+    animation: show 1s ease 2s 1 normal forwards;
+  }
+  & > h2 {
+    opacity: 0;
+    animation: show 1s ease 3s 1 normal forwards;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    @include xs {
+      font-size: 1.5rem;
+      // font-size: 2rem;
+    }
+
+    span {
+      color: $red;
+    }
   }
 }
+
+.line {
+  opacity: 0;
+  border-bottom: 1px solid $blue;
+  max-width: 50%;
+  @include xs {
+    width: 50%;
+  }
+  animation: slide 1s ease 4s 1 normal forwards;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  svg {
+    opacity: 0;
+    flex-shrink: 0;
+    animation: show 1s ease 4s 1 normal forwards;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes slide {
   0% {
     width: 0px;
@@ -89,9 +119,13 @@
   }
 }
 
-.bryonContainer {
+.bryonImg {
+  flex: 1 1 auto;
+  @include xs {
+    flex: 1 0 auto;
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
 }

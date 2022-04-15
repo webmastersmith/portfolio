@@ -1,0 +1,62 @@
+// nextjs: styles/mixins.scss  -other mixins go here as well.
+// typical device sizes
+// Mobile S - 320px
+// Mobile M - 375px
+// Mobile L - 425px
+// iPad Tablet - 768px  //landscape: 1024
+// Laptop - 1024px
+// Laptop L - 1440px
+// 4K - 2560px
+
+// these sizes are tailwind default media queries
+@mixin xs {
+  @media (min-width: 425px) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+// 1280px or bigger
+@mixin xlMax {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+@mixin xl2 {
+  @media (min-width: 1536px) {
+    @content;
+  }
+}
+
+// App.js
+//Now, we can rewrite our example above to use these new mixins.
+// @import 'styles/media.scss';
+// p {
+//   font-size: 16px;
+
+//   @include md {
+//     font-size: 18px;
+//   }
+
+//   @include lg {
+//     font-size: 20px;
+//   }
+// }

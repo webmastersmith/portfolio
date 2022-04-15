@@ -1,4 +1,5 @@
 @import 'styles/variable.module.scss';
+@import 'styles/mixins.scss';
 
 .navContainer {
   background-color: $baseDark;
@@ -15,7 +16,10 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0 4rem;
+  padding: 0 0.5rem;
+  @include xs {
+    padding: 0 4rem;
+  }
 
   & > a > svg {
     width: 6rem;

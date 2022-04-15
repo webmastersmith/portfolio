@@ -1,26 +1,27 @@
 @import 'styles/variable.module.scss';
+@import 'styles/mixins.scss';
 
-$size: 6rem;
 .iconContainer {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem 0 4rem 0;
+  opacity: 0;
+  transform: translateY(75px);
   h1 {
     color: $baseLight;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    font-family: var(--fontFamily);
+    @include xs {
+      font-size: 2.5rem;
+    }
     font-weight: bold;
     margin-bottom: 3rem;
     span {
-      // color: #009fb7;
-      // color: #ee964b;
       color: $red;
-      // color: #80d39b;
     }
   }
-  opacity: 0;
-  transform: translateY(75px);
 }
 .iconAnimation {
   animation: show 1s ease 0s 1 normal forwards;
@@ -37,12 +38,16 @@ $size: 6rem;
 }
 
 .iconInnerContainer {
+  $size: 3rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 2rem;
+  @include sm {
+    gap: 4rem;
+  }
 
   div {
     display: flex;
@@ -53,10 +58,19 @@ $size: 6rem;
   svg {
     width: $size;
     height: $size;
+    @include sm {
+      $size: 6rem;
+      width: $size;
+      height: $size;
+    }
   }
   span {
     color: $baseLight;
+    font-size: 0.8rem;
+    @include sm {
+      font-size: 1rem;
+    }
   }
 }
-.html {
-}
+// .html {
+// }
