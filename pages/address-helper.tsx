@@ -37,7 +37,7 @@ const AddressHelper: NextPage = () => {
   async function celebrate() {
     // prettier-ignore
     const confetti = (await import('canvas-confetti')).default
-    var duration = 5 * 1000
+    var duration = 6 * 1000
     var animationEnd = Date.now() + duration
     var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 }
 
@@ -70,14 +70,19 @@ const AddressHelper: NextPage = () => {
   }
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries, obs) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          celebrate()
-          obs.disconnect() //disconnect once in view.
-        } else setInView(false)
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            celebrate()
+            obs.disconnect() //disconnect once in view.
+          } else setInView(false)
+        }
+      },
+      {
+        rootMargin: '150px', //consider isIntersecting 1000px before item reaches viewport.
       }
-    })
+    )
     if (objRef.current) {
       observer.observe(objRef?.current) //attach observer to 'objRef'
     }
@@ -156,6 +161,7 @@ const AddressHelper: NextPage = () => {
             <img
               src="/AddressHelper/addressHelperIndexPageWide.png"
               alt="image of lufkin address helper website"
+              loading="lazy"
             />
           </div>
         </section>
@@ -229,6 +235,7 @@ const AddressHelper: NextPage = () => {
               <img
                 src="/AddressHelper/addressHelperCard.png"
                 alt="image of address helper card"
+                loading="lazy"
               />
             </div>
             <div className={styles.cardImg}>
@@ -237,6 +244,7 @@ const AddressHelper: NextPage = () => {
               <img
                 src="/AddressHelper/addressHelperCardSearch.png"
                 alt="image of address helper search card"
+                loading="lazy"
               />
             </div>
           </div>
@@ -277,16 +285,17 @@ const AddressHelper: NextPage = () => {
               advance and prevented multiple headaches.
             </p>
           </div>
-          <div className={styles.lighthouse} ref={objRef}>
+          <div className={styles.lighthouse}>
             <h3>This is my first Lighthouse score of 100! &#x1F389;</h3>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/AddressHelper/lighthouseScoreHomepage.png"
               alt="image of Lighthouse score of 100"
+              loading="lazy"
             />
           </div>
         </section>
-        <section className={styles.contactSection}>
+        <section className={styles.contactSection} ref={objRef}>
           <Contact />
         </section>
       </div>

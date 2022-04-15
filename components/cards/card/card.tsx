@@ -86,6 +86,7 @@ export const Card: NextPage<Props> = ({
         src={src}
         alt={alt}
         className={`${id % 2 !== 1 ? styles.gridChildA : styles.gridChildB}`}
+        loading="lazy"
       />
     </div>
   )

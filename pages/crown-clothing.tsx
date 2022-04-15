@@ -99,6 +99,7 @@ const CrownClothing: NextPage = () => {
           <img
             src="/crownClothing/crownClothing.png"
             alt="image of crown clothing website"
+            loading="lazy"
           />
         </div>
       </section>
@@ -157,6 +158,7 @@ const CrownClothing: NextPage = () => {
             <img
               src="/crownClothing/hats.png"
               alt="image of hats merchandise"
+              loading="lazy"
             />
           </div>
           <div className={styles.cardImg}>
@@ -164,6 +166,7 @@ const CrownClothing: NextPage = () => {
             <img
               src="/crownClothing/jackets.png"
               alt="image of jackets merchandise"
+              loading="lazy"
             />
           </div>
         </div>
@@ -175,6 +178,7 @@ const CrownClothing: NextPage = () => {
             <img
               src="/crownClothing/mens.png"
               alt="image of hats merchandise"
+              loading="lazy"
             />
           </div>
 
@@ -183,6 +187,7 @@ const CrownClothing: NextPage = () => {
             <img
               src="/crownClothing/signin.png"
               alt="image of jackets merchandise"
+              loading="lazy"
             />
           </div>
         </div>
@@ -194,6 +199,7 @@ const CrownClothing: NextPage = () => {
             <img
               src="/crownClothing/cart.png"
               alt="image of jackets merchandise"
+              loading="lazy"
             />
           </div>
           <div className={styles.cardImg}>
@@ -201,6 +207,7 @@ const CrownClothing: NextPage = () => {
             <img
               src="/crownClothing/checkout.png"
               alt="image of hats merchandise"
+              loading="lazy"
             />
           </div>
         </div>

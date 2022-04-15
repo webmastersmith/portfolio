@@ -88,6 +88,7 @@ const CandyCrush: NextPage = () => {
           <img
             src="/candyCrush/candyCrush.png"
             alt="image of lufkin address helper website"
+            loading="lazy"
           />
         </div>
       </section>
@@ -146,6 +147,7 @@ const CandyCrush: NextPage = () => {
             <img
               src="/candyCrush/setInterval.png"
               alt="image of candy crush game with set Interval"
+              loading="lazy"
             />
           </div>
           <div className={styles.cardImg}>
@@ -154,6 +156,7 @@ const CandyCrush: NextPage = () => {
             <img
               src="/candyCrush/react.png"
               alt="image of candy crush game with react framework improvements"
+              loading="lazy"
             />
           </div>
         </div>
