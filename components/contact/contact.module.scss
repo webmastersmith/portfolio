@@ -1,19 +1,41 @@
 @import 'styles/variable.module.scss';
+@import 'styles/mixins.scss';
 
 .contactContainer {
   color: $baseDark;
 
   transform: translateY(30px);
   opacity: 0;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include sm {
+    display: block;
+  }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 1rem;
+    @include xs {
+      font-size: 1.5rem;
+    }
+    @include sm {
+      font-size: 2.5rem;
+    }
     font-weight: bold;
     margin-bottom: 1rem;
   }
   p {
-    width: 70%;
     margin-bottom: 1rem;
+    font-size: 0.8rem;
+    width: 100%;
+    @include xs {
+      font-size: 1rem;
+      width: 70%;
+    }
+    @include sm {
+      font-size: 1rem;
+    }
   }
 }
 

@@ -9,8 +9,24 @@
 
 .addressHelperContainer {
   color: $baseDark;
-  padding: 8rem 2rem;
+  padding: 8rem 0.5rem;
+  @include xs {
+    padding: 8rem 1rem;
+  }
   position: relative;
+
+  p {
+    font-size: 0.8rem;
+    @include xs {
+      font-size: 1rem;
+    }
+  }
+  h2 {
+    font-size: 1.2rem;
+    @include xs {
+      font-size: 1.5rem;
+    }
+  }
 }
 .innerContentContainer {
   @include xl {
@@ -30,8 +46,11 @@
   max-width: 700px;
 
   & > h1 {
-    font-size: 2.5rem;
     font-weight: bold;
+    font-size: 2rem;
+    @include xs {
+      font-size: 2.5rem;
+    }
   }
   & > p {
     padding-top: 2rem;
@@ -102,16 +121,38 @@
     align-items: center;
   }
   svg {
-    width: 4rem;
-    height: 4rem;
+    $size: 3rem;
+    width: $size;
+    height: $size;
+    @include xs {
+      $size: 4rem;
+      width: $size;
+      height: $size;
+    }
+  }
+  span {
+    font-size: 0.8rem;
+    @include xs {
+      font-size: 1rem;
+    }
   }
 }
 
 .split {
   display: flex;
+  flex-wrap: wrap;
+  @include md {
+    flex-wrap: nowrap;
+  }
+
   gap: 2rem;
   & > div {
-    width: 50%;
+    flex-grow: 1;
+    @include md {
+      // flex-wrap: nowrap;
+      flex: 1;
+    }
+    // width: 50%;
   }
 }
 
