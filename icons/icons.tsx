@@ -1298,7 +1298,7 @@ export function Bottom(props: SVGProps<SVGSVGElement>) {
       {...props}
     >
       <g transform="translate(-50.906 -155.06)">
-        <path d="m50.906 161.06 150-6v6z" fill="#0e0d0d" />
+        <path d="m50.906 161.06 150-6v6z" fill="#0E0D0D" />
       </g>
     </svg>
   )
