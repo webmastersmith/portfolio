@@ -1,11 +1,18 @@
 import type { NextPage } from 'next'
 import styles from './pdf.module.scss'
 
-//interface Props {
-//	data: string
-//}
-//NextPage<Props>
+interface Props {
+  isPdf: boolean
+}
 
-export const Pdf: NextPage = () => {
-  return <div id={styles.pdf}>hello</div>
+export const Pdf: NextPage<Props> = ({ isPdf }) => {
+  return (
+    <div
+      id="pdf"
+      // remove margin for pdf creation
+      className={`${styles.pdf} ${styles[isPdf ? 'noMargin' : '']}`}
+    >
+      hello
+    </div>
+  )
 }
