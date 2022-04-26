@@ -24,13 +24,16 @@ $imgBox: 200px;
   align-items: flex-start;
   padding: 0 2rem;
 
+  & > div:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
   .bryonImg {
     border-radius: 50%;
     overflow: hidden;
     width: $imgBox;
     height: $imgBox;
     align-self: center;
-    margin-bottom: 2rem;
     & > img {
       width: 100%;
     }
@@ -60,6 +63,11 @@ $imgBox: 200px;
   }
 }
 
-.h4 {
-  font-weight: bold;
+.iconRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  svg {
+    width: 1rem;
+  }
 }

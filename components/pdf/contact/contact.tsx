@@ -9,7 +9,7 @@ interface Props {
 export const Contact: NextPage<Props> = ({ email }) => {
   return (
     <div className={styles.contactContainer}>
-      <h4 className={styles.h4}>Contact</h4>
+      <h4 className="h4">Contact</h4>
       <div className={styles.iconRow}>
         <Location />
         <p>Texas, USA</p>

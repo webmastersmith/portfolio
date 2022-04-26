@@ -2,6 +2,9 @@ import type { NextPage } from 'next'
 import { useState, useEffect } from 'react'
 import { decodeEmail } from 'components'
 import { Contact } from './contact'
+import { Skills } from './skills'
+import { Interest } from './interest'
+
 import styles from './pdf.module.scss'
 import {
   Html5,
@@ -31,6 +34,7 @@ import {
   Email,
   Location,
   Linkedin,
+  UsaFlag,
 } from 'icons'
 
 interface Props {
@@ -59,12 +63,24 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
         </div>
 
         <Contact email={email} />
+
+        <Skills />
+
+        <div>
+          <h4 className="h4">Language</h4>
+          <div className={styles.iconRow}>
+            <UsaFlag />
+            <p>English</p>
+          </div>
+        </div>
+
+        <Interest />
       </div>
 
       <div className={styles.main}>
         <div className={styles.header}>
           <h1>Bryon Smith</h1>
-          <h4 className={styles.h4}>FULL-STACK DEVELOPER</h4>
+          <h4 className="h4">FULL-STACK DEVELOPER</h4>
         </div>
       </div>
     </div>
