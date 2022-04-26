@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import { useState, useRef, useEffect } from 'react'
 import styles from './contact.module.scss'
+import { decodeEmail } from 'components'
 
 //interface Props {
 //	data: string
@@ -8,6 +9,14 @@ import styles from './contact.module.scss'
 //NextPage<Props>
 
 export const Contact: NextPage = () => {
+  const [email, setEmail] = useState('####@########.##')
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setEmail(decodeEmail())
+    }, 3000)
+    return () => clearTimeout(delay)
+  }, [])
+
   const [inView, setInView] = useState(false) //state change loads image.
   const objRef = useRef<HTMLDivElement>(null) //same as document.querySelector('img')
 
@@ -47,8 +56,8 @@ export const Contact: NextPage = () => {
         Feel free to reach out if you&apos;re looking for a developer, have a
         question, or just want to connect.
       </p>
-      <a href="mailto: bryon@smithauto.us" className={styles.email}>
-        bryon@smithauto.us
+      <a href={`mailto:${email}`} className={styles.email}>
+        {email}
       </a>
     </div>
   )

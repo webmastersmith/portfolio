@@ -1,0 +1,24 @@
+@import 'styles/variable.module.scss';
+
+.h4 {
+  font-weight: bold;
+}
+
+.iconRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  // &:not(:last-child):not(:first-child) {
+  //   margin-bottom: 0.1rem;
+  // }
+  a:link {
+    text-decoration: none;
+    // color: #0089fc;
+  }
+
+  & > svg {
+    width: 1rem;
+    color: $baseDark;
+    fill: $baseDark;
+  }
+}
