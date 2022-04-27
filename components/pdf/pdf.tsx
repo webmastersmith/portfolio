@@ -56,25 +56,27 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
       // remove margin for pdf creation
       className={`${styles.pdf} ${styles[isPdf ? 'noMargin' : '']}`}
     >
-      <div className={styles.sidebar}>
-        <div className={styles.bryonImg}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/bryon-suit.jpg" alt="image of bryon smith" />
-        </div>
-
-        <Contact email={email} />
-
-        <Skills />
-
-        <div>
-          <h4 className="h4">Language</h4>
-          <div className={styles.iconRow}>
-            <UsaFlag />
-            <p>English</p>
+      <div className={styles.sidebarContainer}>
+        <div className={styles.sidebar}>
+          <div className={styles.bryonImg}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/bryon-suit.jpg" alt="image of bryon smith" />
           </div>
-        </div>
 
-        <Interest />
+          <Contact email={email} />
+
+          <Skills />
+
+          <div>
+            <h4 className="h4">Language</h4>
+            <div className={styles.iconRow}>
+              <UsaFlag />
+              <p>English</p>
+            </div>
+          </div>
+
+          <Interest />
+        </div>
       </div>
 
       <div className={styles.main}>

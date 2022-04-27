@@ -5,7 +5,6 @@
   width: 816px;
   height: 1056px;
   margin: 6rem 0px;
-  padding: 2rem 1rem;
   color: #000000;
   background-color: #fff;
 }
@@ -16,8 +15,12 @@
 
 //pdf style
 $imgBox: 200px;
+.sidebarContainer {
+  background-color: $baseLight;
+}
 .sidebar {
-  border: 1px solid blue;
+  margin: 2rem 1rem;
+  // border: 1px solid blue;
   flex: 0 0 30%;
   display: flex;
   flex-direction: column;

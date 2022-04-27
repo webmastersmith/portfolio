@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import styles from './interest.module.scss'
-import { Computer } from 'icons'
+import { Computer, Motorcycle, Scuba, Electronics, Plane } from 'icons'
 
 //interface Props {
 //	data: string
@@ -10,9 +10,10 @@ import { Computer } from 'icons'
 export const Interest: NextPage = () => {
   const icons = [
     { Icon: Computer, msg: 'Programming' },
-    { Icon: Computer, msg: 'Programming' },
-    { Icon: Computer, msg: 'Programming' },
-    { Icon: Computer, msg: 'Programming' },
+    { Icon: Electronics, msg: 'Electronics' },
+    { Icon: Motorcycle, msg: 'Motorcycling' },
+    { Icon: Scuba, msg: 'Scuba Diving' },
+    { Icon: Plane, msg: 'Flying' },
   ]
   return (
     <div className={styles.interest}>
