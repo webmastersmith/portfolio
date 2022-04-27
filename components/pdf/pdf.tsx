@@ -65,6 +65,11 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
 
           <Contact email={email} />
 
+          <div>
+            <h4 className="h4">Education</h4>
+            <p></p>
+          </div>
+
           <Skills />
 
           <div>
@@ -81,8 +86,20 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
 
       <div className={styles.main}>
         <div className={styles.header}>
-          <h1>Bryon Smith</h1>
+          <h1>BRYON SMITH</h1>
           <h4 className="h4">FULL-STACK DEVELOPER</h4>
+        </div>
+
+        <div className={styles.about}>
+          <h4 className="h4">About</h4>
+          <p>
+            I&apos;ve studied and practiced programming for six plus years. Four
+            of those years were spent working part time, programming nights and
+            weekends. Two plus years have been spent full time studying and
+            programming full time 8 - 12 hours a day, sometimes 7 days a week. I
+            have finally reached a level of competency that will be valuable to
+            an employer.
+          </p>
         </div>
       </div>
     </div>

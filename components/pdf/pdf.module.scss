@@ -4,6 +4,7 @@
   display: flex;
   width: 816px;
   height: 1056px;
+  gap: 1rem;
   margin: 6rem 0px;
   color: #000000;
   background-color: #fff;
@@ -16,7 +17,7 @@
 //pdf style
 $imgBox: 200px;
 .sidebarContainer {
-  background-color: $baseLight;
+  // background-color: $baseLight;
 }
 .sidebar {
   margin: 2rem 1rem;
@@ -48,23 +49,36 @@ $imgBox: 200px;
   // border-bottom: 1px solid red;
   // border-right: 1px solid red;
   flex: 0 0 70%;
+  margin: 2rem 1rem;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 2rem;
+
+  & > div:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 
   //bryon
   .header {
-    margin-top: 60px;
+    height: 200px;
+    padding-top: 60px;
     & > h1 {
       font-size: 3rem;
-      color: $red;
       font-weight: bold;
-      color: $pdfColor;
+      color: $blue;
     }
   }
-}
+
+  .about {
+    max-width: 450px;
+    & > p {
+      word-wrap: break-word;
+      width: inherit; /* width: 100px; */
+      white-space: pre-wrap;
+    }
+  }
+} //end main
 
 .iconRow {
   display: flex;
