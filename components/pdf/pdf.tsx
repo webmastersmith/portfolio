@@ -92,13 +92,16 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
 
         <div className={styles.about}>
           <h4 className="h4">About</h4>
-          <p>
-            I&apos;ve studied and practiced programming for six plus years. Four
-            of those years were spent working part time, programming nights and
-            weekends. Two plus years have been spent full time studying and
-            programming full time 8 - 12 hours a day, sometimes 7 days a week. I
-            have finally reached a level of competency that will be valuable to
-            an employer.
+          <p className={styles.text}>
+            I&apos;ve studied and practiced programming for 6+ years. the first
+            four years, I worked part time, programming nights and weekends. For
+            more than two years I dedicated myself to learning full time 8 - 12
+            hours a day, most times 7 days a week. I have finally reached a
+            level of competency that will be valuable to an employer. My
+            specialty is{' '}
+            <span>
+              HTML, CSS, React, Typescript, Javascript, Nodejs, Nextjs, MongoDB.
+            </span>
           </p>
         </div>
       </div>
