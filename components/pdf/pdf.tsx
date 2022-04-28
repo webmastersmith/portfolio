@@ -100,7 +100,7 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
 
         <div className={styles.about}>
           <h4 className="h4">About</h4>
-          {/* <p className={styles.text}>
+          {/*  <p className={styles.text}>
             Three words that best describe me:
             <p className={styles.moto}>
               <span>trusted</span>
