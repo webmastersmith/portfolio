@@ -4,6 +4,7 @@ import { decodeEmail } from 'components'
 import { Contact } from './contact'
 import { Skills } from './skills'
 import { Interest } from './interest'
+import { Accomplishments } from './accomplishments'
 
 import styles from './pdf.module.scss'
 import {
@@ -65,22 +66,29 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
 
           <Contact email={email} />
 
-          <div>
+          <div className={styles.education}>
             <h4 className="h4">Education</h4>
-            <p></p>
+            <div className={styles.group}>
+              <p className={styles.year}>2003 - 2015</p>
+              <p className={styles.title}>Business Owner</p>
+              <p className={styles.college}>Smith Auto</p>
+            </div>
+            <div className={styles.group}>
+              <p className={styles.year}>1997 - 1999</p>
+              <p className={styles.title}>Applied Science Degree</p>
+              <p className={styles.college}>Texas State Technical College</p>
+            </div>
           </div>
 
           <Skills />
 
-          <div>
+          <div className={styles.language}>
             <h4 className="h4">Language</h4>
             <div className={styles.iconRow}>
               <UsaFlag />
               <p>English</p>
             </div>
           </div>
-
-          <Interest />
         </div>
       </div>
 
@@ -92,18 +100,31 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
 
         <div className={styles.about}>
           <h4 className="h4">About</h4>
+          {/* <p className={styles.text}>
+            Three words that best describe me:
+            <p className={styles.moto}>
+              <span>trusted</span>
+              <span>dependable</span>
+              <span>professional</span>
+            </p>
+          </p> */}
           <p className={styles.text}>
-            I&apos;ve studied and practiced programming for 6+ years. the first
-            four years, I worked part time, programming nights and weekends. For
-            more than two years I dedicated myself to learning full time 8 - 12
-            hours a day, most times 7 days a week. I have finally reached a
-            level of competency that will be valuable to an employer. My
-            specialty is{' '}
+            I&apos;ve studied and practiced programming for 6+ years. The first
+            four of those years, I worked part time, programming nights and
+            weekends. For the last 2+ years I doubled my efforts and dedicated
+            myself full-time, practicing 8 - 12 hours a day, 7 days a week. I
+            feel I have finally reached a level of competency that will be
+            valuable to an employer. My specialty is{' '}
             <span>
-              HTML, CSS, React, Typescript, Javascript, Nodejs, Nextjs, MongoDB.
+              HTML, CSS, React, Typescript, Javascript, Nodejs, Nextjs and
+              MongoDB.
             </span>
           </p>
         </div>
+
+        <Accomplishments />
+
+        <Interest />
       </div>
     </div>
   )

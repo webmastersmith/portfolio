@@ -15,6 +15,7 @@
   margin: 0px;
 }
 
+// SIDEBAR
 //pdf style
 $imgBox: 200px;
 .sidebarContainer {
@@ -45,6 +46,29 @@ $imgBox: 200px;
   }
 }
 
+.education {
+  & > div:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .year {
+    font-size: 0.7rem;
+    margin-bottom: -0.3rem;
+  }
+  .title {
+    color: $pdfColor;
+    font-style: normal;
+    // font-size: 1rem;
+  }
+  .college {
+    // font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+  }
+}
+
+// MAIN
 .main {
   // border-top: 1px solid red;
   // border-bottom: 1px solid red;
@@ -76,16 +100,21 @@ $imgBox: 200px;
   }
 
   .about {
-    // max-width: 80%;
-    // flex: 0 0 450px;
+    .moto {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    & > p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    .text {
+      span {
+        font-weight: bold;
+      }
+    }
   }
 } //end main
-
-.text {
-  span {
-    font-weight: bold;
-  }
-}
 
 .iconRow {
   display: flex;
