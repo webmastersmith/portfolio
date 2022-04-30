@@ -25,7 +25,9 @@ const Resume: NextPage = ({ children }) => {
         style={{ display: `${isPdf ? 'none' : 'block'}` }}
       />
 
-      <DownloadButton />
+      <div style={{ display: `${isPdf ? 'none' : 'block'}` }}>
+        <DownloadButton />
+      </div>
 
       <Pdf isPdf={isPdf} />
     </div>

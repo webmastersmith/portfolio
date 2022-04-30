@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { decodeEmail } from 'components'
 import { Contact } from './contact'
@@ -57,6 +58,9 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
       // remove margin for pdf creation
       className={`${styles.pdf} ${styles[isPdf ? 'noMargin' : '']}`}
     >
+      <Head>
+        <meta name="viewport" content="width=820, initial-scale=1" />
+      </Head>
       <div className={styles.sidebarContainer}>
         <div className={styles.sidebar}>
           <div className={styles.bryonImg}>
