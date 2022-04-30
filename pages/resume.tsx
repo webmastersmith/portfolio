@@ -24,9 +24,10 @@ const Resume: NextPage = ({ children }) => {
         //needed for puppeteer pdf
         style={{ display: `${isPdf ? 'none' : 'block'}` }}
       />
-      <Pdf isPdf={isPdf} />
 
       <DownloadButton />
+
+      <Pdf isPdf={isPdf} />
     </div>
   )
 }
