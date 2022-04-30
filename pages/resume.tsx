@@ -8,14 +8,14 @@ const Resume: NextPage = ({ children }) => {
   const [isPdf, setIsPdf] = useState(false)
 
   useEffect(() => {
-    console.log(window.location.href)
+    // console.log(window.location.href)
     const url = new URL(window.location.href)
     const params = new URLSearchParams(url.search)
     if (params.get('pdf')) {
       setIsPdf(true)
     }
   }, [])
-  console.log(isPdf)
+  // console.log(isPdf)
 
   return (
     <div className={styles.container}>

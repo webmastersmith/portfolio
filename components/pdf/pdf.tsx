@@ -69,7 +69,7 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
           <div className={styles.education}>
             <h4 className="h4">Education</h4>
             <div className={styles.group}>
-              <p className={styles.year}>2003 - 2015</p>
+              <p className={styles.year}>2002 - 2015</p>
               <p className={styles.title}>Business Owner</p>
               <p className={styles.college}>Smith Auto</p>
             </div>
@@ -114,7 +114,7 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
             weekends. For the last 2+ years I doubled my efforts and dedicated
             myself full-time, practicing 8 - 12 hours a day, 7 days a week. I
             feel I have finally reached a level of competency that will be
-            valuable to an employer. My specialty is{' '}
+            valuable to my employer. My specialty is{' '}
             <span>
               HTML, CSS, React, Typescript, Javascript, Nodejs, Nextjs and
               MongoDB.
