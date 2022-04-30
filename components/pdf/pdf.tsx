@@ -59,7 +59,8 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
       className={`${styles.pdf} ${styles[isPdf ? 'noMargin' : '']}`}
     >
       <Head>
-        <meta name="viewport" content="width=820, initial-scale=1" />
+        {/* <meta name="viewport" content="width=820, initial-scale=1" /> */}
+        <meta name="viewport" content="user-scalable = yes"></meta>
       </Head>
       <div className={styles.sidebarContainer}>
         <div className={styles.sidebar}>
