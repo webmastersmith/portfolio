@@ -1,7 +1,9 @@
 .container {
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  // margin: 0 auto;
   width: 100%;
 }
 .angle {

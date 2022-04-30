@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Pdf } from 'components'
+import { Pdf, DownloadButton } from 'components'
 import { useEffect, useState } from 'react'
 import styles from 'styles/resume.module.scss'
 import { Top } from 'icons'
@@ -25,6 +25,8 @@ const Resume: NextPage = ({ children }) => {
         style={{ display: `${isPdf ? 'none' : 'block'}` }}
       />
       <Pdf isPdf={isPdf} />
+
+      <DownloadButton />
     </div>
   )
 }
