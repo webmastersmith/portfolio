@@ -121,7 +121,7 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
             feel I have finally reached a level of competency that will be
             valuable to my employer. My specialty is{' '}
             <span>
-              HTML, CSS, React, Typescript, Javascript, Nodejs, Nextjs and
+              HTML, CSS, React, Typescript, JavaScript, NodeJS, NextJS and
               MongoDB.
             </span>
           </p>
