@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import styles from './contact.module.scss'
-import { Email, Location, Linkedin, Twitter, Webpage } from 'icons'
+import { Email, Location, Linkedin, Twitter, Webpage, Github } from 'icons'
 
 interface Props {
   email: string
@@ -32,6 +32,16 @@ export const Contact: NextPage<Props> = ({ email }) => {
           rel="noreferrer"
         >
           BryonSmith
+        </a>
+      </div>
+      <div className={styles.iconRow}>
+        <Github />
+        <a
+          href="https://github.com/webmastersmith"
+          target="_blank"
+          rel="noreferrer"
+        >
+          WebMasterSmith
         </a>
       </div>
       <div className={styles.iconRow}>
