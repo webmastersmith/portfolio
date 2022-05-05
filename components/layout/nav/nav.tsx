@@ -19,7 +19,7 @@ export const Nav: NextPage = () => {
         </Link>
         <ul>
           <li>
-            <Link href="/resume" as="/resume.html">
+            <Link href="/resume">
               <a>resume</a>
             </Link>
           </li>
