@@ -7,14 +7,30 @@
   // &:not(:last-child):not(:first-child) {
   //   margin-bottom: 0.1rem;
   // }
-  a:link {
+  // a:link {
+  //   text-decoration: none;
+  //   // color: #0089fc;
+  // }
+
+  a:link,
+  a:active,
+  a:focus {
     text-decoration: none;
-    // color: #0089fc;
+  }
+  a {
+    color: $blue;
+  }
+  a:hover {
+    color: $pdfColor;
   }
 
   & > svg {
     width: 1rem;
+    flex: 0 0 auto;
     // color: $baseDark;
     // fill: $baseDark;
+  }
+  span {
+    font-size: 0.9rem;
   }
 }

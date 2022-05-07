@@ -13,6 +13,10 @@
   background-position: 0 0;
   background-repeat: no-repeat;
   position: relative;
+  // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  //   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  //   rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: 0px 30px 90px rgba(0, 0, 0, 0.4);
 }
 // .pdf:before {
 //   position: relative;
@@ -28,6 +32,7 @@
 //when puppeteer pdf requested, no margin.
 .noMargin {
   margin: 0px;
+  box-shadow: none;
 }
 
 // SIDEBAR
@@ -35,11 +40,12 @@
 $imgBox: 200px;
 .sidebarContainer {
   // background-color: $baseLight;
+  background-color: $baseDark;
 }
 .sidebar {
-  margin: 2rem 1rem;
-  // border: 1px solid blue;
-  // flex: 0 0 30%;
+  margin: 2rem 0rem;
+  // color: $baseDark;
+  color: $baseLight;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -57,6 +63,16 @@ $imgBox: 200px;
     align-self: center;
     & > img {
       width: 100%;
+    }
+  }
+
+  // Language
+  .iconRow {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    svg {
+      width: 1rem;
     }
   }
 }
@@ -90,7 +106,7 @@ $imgBox: 200px;
   // border-right: 1px solid red;
   // flex: 0 0 70%;
   padding: 2rem 1rem;
-  padding-left: 0;
+  // padding-left: 0;
 
   display: flex;
   flex-direction: column;
@@ -130,12 +146,3 @@ $imgBox: 200px;
     }
   }
 } //end main
-
-.iconRow {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  svg {
-    width: 1rem;
-  }
-}

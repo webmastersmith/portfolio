@@ -12,17 +12,19 @@ export const Contact: NextPage<Props> = ({ email }) => {
       <h4 className="h4">Contact</h4>
       <div className={styles.iconRow}>
         <Location />
-        <p>Texas, USA</p>
+        <span>Texas, USA</span>
       </div>
       <div className={styles.iconRow}>
         <Webpage />
         <a href="https://bio.smithauto.us" target="_blank" rel="noreferrer">
-          bio.smithauto.us
+          <span>bio.smithauto.us</span>
         </a>
       </div>
       <div className={styles.iconRow}>
         <Email />
-        <a href={`mailto:${email}`}>{email}</a>
+        <a href={`mailto:${email}`}>
+          <span>{email}</span>
+        </a>
       </div>
       <div className={styles.iconRow}>
         <Linkedin />
@@ -31,7 +33,7 @@ export const Contact: NextPage<Props> = ({ email }) => {
           target="_blank"
           rel="noreferrer"
         >
-          BryonSmith
+          <span>linkedin.com/in/bryonsmith</span>
         </a>
       </div>
       <div className={styles.iconRow}>
@@ -41,7 +43,7 @@ export const Contact: NextPage<Props> = ({ email }) => {
           target="_blank"
           rel="noreferrer"
         >
-          WebMasterSmith
+          <span>github.com/webmastersmith</span>
         </a>
       </div>
       <div className={styles.iconRow}>
@@ -51,7 +53,7 @@ export const Contact: NextPage<Props> = ({ email }) => {
           target="_blank"
           rel="noreferrer"
         >
-          MasterTech40
+          <span>twitter.com/MasterTech40</span>
         </a>
       </div>
     </div>
