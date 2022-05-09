@@ -5,7 +5,7 @@ import { decodeEmail } from 'components'
 import { Contact } from './contact'
 import { Skills } from './skills'
 import { Interest } from './interest'
-import { License } from './license'
+import { Licenses } from './licenses'
 
 import styles from './pdf.module.scss'
 import {
@@ -52,6 +52,18 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
     return () => clearTimeout(delay)
   }, [])
 
+  const courses = [
+    'Advanced CSS, SASS, Flexbox, Grid, Animations',
+    'Web Design for Developers',
+    'The Complete JavaScript Course',
+    'JavaScript: The Advanced Concepts',
+    'Complete React Developer',
+    'Modern React with Redux',
+    'Typescript with modern React',
+    'Next.js & React - The Complete Guide',
+    'Typescript: The Complete Developers Guide',
+    'Node.js, Express, MongoDB. The Complete Bootcamp',
+  ]
   return (
     <div
       id="pdf"
@@ -121,21 +133,64 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
           </p>
         </div>
 
-        <div className={styles.career}>
-          <h4 className="h4">Career Highlights</h4>
+        <div className={styles.experience}>
+          <h4 className="h4">Experience</h4>
           <div className={styles.group}>
-            <p className={styles.year}>2002 - 2015</p>
-            <p className={styles.title}>Business Owner</p>
-            <p className={styles.college}>Smith Auto</p>
+            <p className={styles.business}>
+              full-stack developer training <span>2016-current</span>
+            </p>
+            <p>
+              <span></span>I have dedicated the last 6+ years learning, growing
+              and making myself the best programmer I can be. Check out{' '}
+              <a
+                href="https://bio.smithauto.us"
+                rel={'noreferrer'}
+                target={'_blank'}
+              >
+                my profile page
+              </a>{' '}
+              for examples of my latest work. Here are a few of the training
+              courses and projects:
+            </p>
+            <div className={styles.course}>
+              {courses.map((course) => {
+                return <span key={course}>{course}</span>
+              })}
+            </div>
           </div>
           <div className={styles.group}>
-            <p className={styles.year}>1997 - 1999</p>
-            <p className={styles.title}>Applied Science Degree</p>
-            <p className={styles.college}>Texas State Technical College</p>
+            <p className={styles.business}>
+              Smith Auto <span>2003-2015</span>
+            </p>
+            <p>
+              <span>
+                Owner, Manager, Lead Tech, ASE Master Mechanic, L1 Advanced
+                Engine Performance
+              </span>
+              . I specialized in computer diagnostic, electrical troubleshooting
+              and mechanical diagnostic repair. Skillful diagnostics and repair
+              earned me the reputation as the &apos;go to shop&apos; and the
+              &apos;2014 Best of Car Repair in Crockett&apos; award. Check out
+              one of my training Videos! I trained and supervised mechanics,
+              service writers and handled management duties: job assignments,
+              hiring, firing, payroll.
+            </p>
+          </div>
+          <div className={styles.group}>
+            <p className={styles.business}>
+              Whitehead Electric and A/C <span>2000-2002</span>
+            </p>
+            <p>
+              <span>Electrical and HVAC install and repair.</span>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Recusandae aperiam cumque hic laudantium corporis mollitia at est
+              enim? Quis quibusdam harum facere quam quos eaque ullam totam est
+              nulla exercitationem?
+            </p>
           </div>
         </div>
 
-        <License />
+        <Licenses />
 
         <Interest />
       </div>
