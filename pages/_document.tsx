@@ -13,6 +13,11 @@ class MyDocument extends Document {
             crossOrigin=""
             type="font/ttf"
           />
+          <link
+            as="font"
+            href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@400;700&display=swap"
+            rel="preload"
+          />
         </Head>
         <body>
           <Main />

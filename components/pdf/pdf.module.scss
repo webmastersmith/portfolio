@@ -13,6 +13,7 @@
   background-color: #fff;
   box-shadow: 0px 30px 90px rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  font-family: $roboto;
 
   .bgImage {
     background-image: url('/resume_background.svg');
@@ -46,13 +47,8 @@ $imgBox: 200px;
     top: 0;
     left: 0;
     height: calc($imgBox + 2rem); //margin-top is 2rem.
-    width: 101%;
-    // clip-path: polygon(0 0, 0 100%, 100% 0);
-    clip-path: polygon(
-      100% 0,
-      0 100%,
-      100% 100%
-    ); //stop black line from showing up. 110%
+    width: 101%; //stop black line from showing up in some browsers.
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
   }
 }
 .sidebar {
@@ -95,49 +91,37 @@ $imgBox: 200px;
   & > div:not(:last-child) {
     margin-bottom: 0.5rem;
   }
-  p {
-    font-size: 0.8rem;
-  }
   .year {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-bottom: -0.3rem;
+    font-style: italic;
+    span {
+      font-size: 0.7rem;
+    }
   }
   .title {
     color: $pdfColor;
     font-style: normal;
-    // font-size: 1rem;
-  }
-  .college {
-    // font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
+    font-size: 1rem;
   }
 }
 
 // MAIN
 .main {
-  // border-top: 1px solid red;
-  // border-bottom: 1px solid red;
-  // border-right: 1px solid red;
-  // flex: 0 0 70%;
   padding: 2rem 1rem;
   padding-right: 2rem;
   z-index: 1;
-  // padding-left: 0;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  // flex-wrap: wrap;
-  // width: 100%;
-  // min-width: 0;
 
   & > div:not(:last-child) {
     margin-bottom: 2rem;
   }
 
-  //bryon
+  //Bryon Name
   .header {
-    // height: 200px;
     padding-top: 60px;
     & > h1 {
       font-size: 3rem;
@@ -151,49 +135,11 @@ $imgBox: 200px;
       display: flex;
       justify-content: space-around;
     }
-
-    // & > p:not(:last-child) {
-    //   margin-bottom: 1rem;
-    // }
   }
   .text {
     font-size: 0.8rem;
-    // text-indent: 20px;
-    // margin-bottom: 1.5rem;
     span {
       font-weight: bold;
-    }
-  }
-
-  // Experience
-  .experience {
-    & > div:not(:last-child) {
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 0.8rem;
-      & > span {
-        font-weight: bold;
-      }
-    }
-    .business {
-      color: $pdfColor;
-      font-style: italic;
-      font-weight: bold;
-      span {
-        color: $baseDark;
-        font-size: 0.7rem;
-        margin-left: 0.3rem;
-      }
-    }
-    .course {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      justify-items: start;
-      span {
-        font-size: 0.6rem;
-        font-weight: bold;
-      }
     }
   }
 } //end main

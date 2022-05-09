@@ -1809,3 +1809,18 @@ export function Webpage(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+export function ArrowRight(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      version="1.1"
+      viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      {...props}
+    >
+      <g transform="translate(14.795 -105.12)">
+        <path d="m1.2051 113.04-14.902 8.0742-0.81513-2.1005s4.635-2.0504 4.5425-5.8992c-0.087987-3.6608-4.8252-5.8598-4.8252-5.8598l0.7132-2.1405z" />
+      </g>
+    </svg>
+  )
+}
