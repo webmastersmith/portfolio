@@ -1,15 +1,15 @@
 import type { NextPage } from 'next'
-import styles from './accomplishments.module.scss'
+import styles from './license.module.scss'
 
 //interface Props {
 //	data: string
 //}
 //NextPage<Props>
 
-export const Accomplishments: NextPage = () => {
+export const License: NextPage = () => {
   return (
-    <div className={styles.accomplishments}>
-      <h4 className="h4">Accomplishments</h4>
+    <div className={styles.license}>
+      <h4 className="h4">Licenses</h4>
       <div className={styles.grid}>
         <div className={styles.gridChild1}>
           <div className={styles.item}>

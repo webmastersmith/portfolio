@@ -5,7 +5,7 @@ import { decodeEmail } from 'components'
 import { Contact } from './contact'
 import { Skills } from './skills'
 import { Interest } from './interest'
-import { Accomplishments } from './accomplishments'
+import { License } from './license'
 
 import styles from './pdf.module.scss'
 import {
@@ -62,7 +62,9 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
         {/* <meta name="viewport" content="width=820, initial-scale=1" /> */}
         <meta name="viewport" content="user-scalable = yes"></meta>
       </Head>
+      <div className={styles.bgImage}></div>
       <div className={styles.sidebarContainer}>
+        <div className={styles.whiteBG}></div>
         <div className={styles.sidebar}>
           <div className={styles.bryonImg}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -105,29 +107,35 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
 
         <div className={styles.about}>
           <h4 className="h4">About</h4>
-          {/*  <p className={styles.text}>
-            Three words that best describe me:
-            <p className={styles.moto}>
-              <span>trusted</span>
-              <span>dependable</span>
-              <span>professional</span>
-            </p>
-          </p> */}
           <p className={styles.text}>
-            I&apos;ve studied and practiced programming for 6+ years. The first
-            four of those years, I worked part time, programming nights and
-            weekends. For the last 2+ years I doubled my efforts and dedicated
-            myself full-time, practicing 8 - 12 hours a day, 7 days a week. I
-            feel I have finally reached a level of competency that will be
-            valuable to my employer. My specialty is{' '}
-            <span>
-              HTML, CSS, React, Typescript, JavaScript, NodeJS, NextJS and
-              MongoDB.
-            </span>
+            Drive, hard work, and my love of programing has made me a successful
+            full-stack developer. I&apos;ve studied and practiced programming
+            for 6+ years. For the last 2+ years, I doubled my efforts,
+            practicing 8-12 hours a day, 7 days a week.{' '}
+            <span>HTML, CSS, JavaScript, React, Typescript, Node.js</span> are
+            just a few of my skills.
+          </p>
+          <p className={styles.text}>
+            Thank you for reviewing my resume, I&apos;m excited to talk to you
+            and see if we&apos;re a good fit.
           </p>
         </div>
 
-        <Accomplishments />
+        <div className={styles.career}>
+          <h4 className="h4">Career Highlights</h4>
+          <div className={styles.group}>
+            <p className={styles.year}>2002 - 2015</p>
+            <p className={styles.title}>Business Owner</p>
+            <p className={styles.college}>Smith Auto</p>
+          </div>
+          <div className={styles.group}>
+            <p className={styles.year}>1997 - 1999</p>
+            <p className={styles.title}>Applied Science Degree</p>
+            <p className={styles.college}>Texas State Technical College</p>
+          </div>
+        </div>
+
+        <License />
 
         <Interest />
       </div>
