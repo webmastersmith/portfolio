@@ -18,14 +18,16 @@ export const Interest: NextPage = () => {
   return (
     <div className={styles.interest}>
       <h4 className="h4">Interest</h4>
-      {icons.map(({ Icon, msg }) => {
-        return (
-          <div key={msg} className={styles.iconRow}>
-            <Icon />
-            <span>{msg}</span>
-          </div>
-        )
-      })}
+      <div className={styles.iconBlock}>
+        {icons.map(({ Icon, msg }) => {
+          return (
+            <div key={msg} className={styles.iconRow}>
+              <Icon />
+              <span>{msg}</span>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

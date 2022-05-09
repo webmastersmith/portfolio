@@ -24,7 +24,7 @@ export const Experience: NextPage = () => {
 
   const smithAuto = [
     'Pioneered new methods of building customer trust and confidence with before/after repair videos.',
-    'I trained and supervised mechanics, service writers and handled management duties: job assignments, hiring, firing, payroll.',
+    'I trained and supervised mechanics, service writers.',
     'Worked closely with parts suppliers to get request in a timely fashion for the best price.',
     'Created work guides that made employee responsibility and accountability clear.',
     'Streamlined employee work flow to prevent bottle necks and interruptions.',
@@ -37,8 +37,7 @@ export const Experience: NextPage = () => {
           Full-Stack Developer Training <span>2016-current</span>
         </p>
         <p>
-          I have dedicated the last 6+ years learning, growing and making myself
-          the best programmer I can be. Check out{' '}
+          I have dedicated the last 6+ years learning and growing. Check out{' '}
           <a
             href="https://bio.smithauto.us"
             rel={'noreferrer'}
@@ -49,9 +48,13 @@ export const Experience: NextPage = () => {
           for examples of my latest work. Here are a few of the training
           courses:
         </p>
-        <div className={styles.course}>
+        <div className={styles.courses}>
           {courses.map((course) => {
-            return <span key={course}>{course}</span>
+            return (
+              <div key={course} className={styles.course}>
+                <ArrowRight /> <span>{course}</span>
+              </div>
+            )
           })}
         </div>
       </div>
@@ -60,11 +63,11 @@ export const Experience: NextPage = () => {
         <p className={styles.business}>
           Smith Auto <span>2003-2015</span>
         </p>
+        <p className={styles.bold}>
+          Owner, Manager, Lead Tech, ASE Master Mechanic, L1 Advanced Engine
+          Performance
+        </p>
         <p>
-          <span>
-            Owner, Manager, Lead Tech, ASE Master Mechanic, L1 Advanced Engine
-            Performance
-          </span>{' '}
           Hard work and skillful diagnostics earned me the reputation as the
           &apos;go to shop&apos; and the &apos;2014 Best of Car Repair in
           Crockett&apos; award. Check out one of my{' '}
@@ -81,7 +84,9 @@ export const Experience: NextPage = () => {
           {smithAuto.map((item, i) => {
             return (
               <Fragment key={i}>
-                <ArrowRight /> <span>{item}</span>
+                <div>
+                  <ArrowRight /> <span>{item}</span>
+                </div>
               </Fragment>
             )
           })}
@@ -92,9 +97,10 @@ export const Experience: NextPage = () => {
         <p className={styles.business}>
           Whitehead Electric and A/C <span>2000-2002</span>
         </p>
+        <p className={styles.bold}>Electrical and HVAC install and repair.</p>
         <p>
-          <span>Electrical and HVAC install and repair.</span> Install and
-          repair of commercial, residential electrical and HVAC systems.
+          Install and repair of commercial, residential electrical and HVAC
+          systems.
         </p>
       </div>
     </div>

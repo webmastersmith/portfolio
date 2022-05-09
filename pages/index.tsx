@@ -27,7 +27,6 @@ const Home: NextPage = () => {
     )
     if (ref.current) {
       observer.observe(ref?.current) //attach observer to 'objRef'
-      console.log(ref?.current)
     }
     return () => {
       observer.disconnect() //when unmount disconnect observer

@@ -9,36 +9,7 @@ import { Licenses } from './licenses'
 import { Experience } from './experience'
 
 import styles from './pdf.module.scss'
-import {
-  Html5,
-  Apache,
-  Bash,
-  Bootstrap,
-  Css3,
-  Sass,
-  Tailwind,
-  Firebase,
-  Js,
-  LinuxTux,
-  Mongodb,
-  Nextjs,
-  Node,
-  Puppeteer,
-  React,
-  Typescript,
-  Git,
-  Express,
-  Gimp,
-  CreateReactApp,
-  Stripe,
-  Heroku,
-  Github,
-  Top,
-  Email,
-  Location,
-  Linkedin,
-  UsaFlag,
-} from 'icons'
+import { UsaFlag } from 'icons'
 
 interface Props {
   isPdf: boolean
@@ -60,7 +31,6 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
       className={`${styles.pdf} ${styles[isPdf ? 'noMargin' : '']}`}
     >
       <Head>
-        {/* <meta name="viewport" content="width=820, initial-scale=1" /> */}
         <meta name="viewport" content="user-scalable = yes"></meta>
       </Head>
       <div className={styles.bgImage}></div>

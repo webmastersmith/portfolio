@@ -37,7 +37,6 @@ export const Contact: NextPage = () => {
     )
     if (objRef.current) {
       observer.observe(objRef?.current) //attach observer to 'objRef'
-      console.log(objRef?.current)
     }
     return () => {
       observer.disconnect() //when unmount disconnect observer

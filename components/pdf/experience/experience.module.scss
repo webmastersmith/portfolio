@@ -23,11 +23,15 @@
   }
 
   .smithAutoSkill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-size: 0.7rem;
     width: 100%;
+    & > div {
+      display: flex;
+      align-items: center;
+      & > span {
+        margin-left: 0.5rem;
+      }
+    }
 
     svg {
       $size: 0.5rem;
@@ -37,7 +41,7 @@
   }
 
   // programming courses
-  .course {
+  .courses {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: start;
@@ -45,5 +49,19 @@
       font-size: 0.6rem;
       font-weight: bold;
     }
+    .course {
+      display: flex;
+      align-items: center;
+      svg {
+        $size: 0.5rem;
+        width: $size;
+        height: $size;
+        margin-right: 0.5rem;
+      }
+    }
   }
 } // end experience
+
+.bold {
+  font-weight: bold;
+}

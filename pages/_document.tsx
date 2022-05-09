@@ -10,13 +10,8 @@ class MyDocument extends Document {
             rel="preload"
             href="/fonts/Caveat.ttf"
             as="font"
-            crossOrigin=""
+            crossOrigin="true"
             type="font/ttf"
-          />
-          <link
-            as="font"
-            href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@400;700&display=swap"
-            rel="preload"
           />
         </Head>
         <body>

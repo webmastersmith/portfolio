@@ -13,7 +13,6 @@ export const Layout: NextPage = ({ children }) => {
   const [isPdf, setIsPdf] = useState(false)
 
   useEffect(() => {
-    console.log(window.location.href)
     const url = new URL(window.location.href)
     const params = new URLSearchParams(url.search)
     if (params.get('pdf')) {
