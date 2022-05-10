@@ -2,7 +2,7 @@
 
 .experience {
   & > div:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
   }
   p {
     font-size: 0.8rem;
@@ -25,6 +25,7 @@
   .smithAutoSkill {
     font-size: 0.7rem;
     width: 100%;
+    white-space: nowrap;
     & > div {
       display: flex;
       align-items: center;
@@ -50,6 +51,7 @@
       font-weight: bold;
     }
     .course {
+      white-space: nowrap;
       display: flex;
       align-items: center;
       svg {
@@ -64,4 +66,5 @@
 
 .bold {
   font-weight: bold;
+  white-space: nowrap;
 }

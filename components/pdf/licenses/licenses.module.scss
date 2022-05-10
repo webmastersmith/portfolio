@@ -5,9 +5,9 @@
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    // justify-items: center;
     gap: 1rem;
     width: 100%;
+    white-space: nowrap;
   }
   .title {
     font-weight: bold;

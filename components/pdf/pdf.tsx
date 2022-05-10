@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState, useEffect } from 'react'
-import { decodeEmail } from 'components'
+// import { useState, useEffect } from 'react'
+// import { decodeEmail } from 'components'
 import { Contact } from './contact'
 import { Skills } from './skills'
 import { Interest } from './interest'
@@ -16,13 +16,13 @@ interface Props {
 }
 
 export const Pdf: NextPage<Props> = ({ isPdf }) => {
-  const [email, setEmail] = useState('####@########.##')
-  useEffect(() => {
-    const delay = setTimeout(() => {
-      setEmail(decodeEmail())
-    }, 3000)
-    return () => clearTimeout(delay)
-  }, [])
+  // const [email, setEmail] = useState('bryon@smithauto.us')
+  // useEffect(() => {
+  //   const delay = setTimeout(() => {
+  //     setEmail(decodeEmail())
+  //   }, 3000)
+  //   return () => clearTimeout(delay)
+  // }, [])
 
   return (
     <div
@@ -42,7 +42,7 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
             <img src="/bryon-suit.jpg" alt="image of bryon smith" />
           </div>
 
-          <Contact email={email} />
+          <Contact email="bryon@smithauto.us" />
 
           <div className={styles.education}>
             <h4 className="h4">Education</h4>
@@ -89,7 +89,7 @@ export const Pdf: NextPage<Props> = ({ isPdf }) => {
             just a few of my skills.
           </p>
           <p className={styles.text}>
-            Thank you for reviewing my resume, I&apos;m excited to talk to you
+            Thank you for reviewing my resume. I&apos;m excited to talk to you
             and see if we&apos;re a good fit.
           </p>
         </div>

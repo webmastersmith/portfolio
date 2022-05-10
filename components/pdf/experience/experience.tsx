@@ -25,9 +25,9 @@ export const Experience: NextPage = () => {
   const smithAuto = [
     'Pioneered new methods of building customer trust and confidence with before/after repair videos.',
     'I trained and supervised mechanics, service writers.',
-    'Worked closely with parts suppliers to get request in a timely fashion for the best price.',
+    'Worked closely with parts suppliers to receive parts in a timely fashion for the best price.',
     'Created work guides that made employee responsibility and accountability clear.',
-    'Streamlined employee work flow to prevent bottle necks and interruptions.',
+    'Streamlined employee workflow to prevent bottlenecks and interruptions.',
   ]
   return (
     <div className={styles.experience}>
@@ -69,14 +69,14 @@ export const Experience: NextPage = () => {
         </p>
         <p>
           Hard work and skillful diagnostics earned me the reputation as the
-          &apos;go to shop&apos; and the &apos;2014 Best of Car Repair in
-          Crockett&apos; award. Check out one of my{' '}
+          go-to shop and the &apos;2014 Best of Car Repair in Crockett&apos;
+          award. Check out one of my{' '}
           <a
             href="https://www.youtube.com/watch?v=brXckSyccm8"
             target={'_blank'}
             rel="noreferrer"
           >
-            training Videos
+            training videos
           </a>
           !
         </p>
